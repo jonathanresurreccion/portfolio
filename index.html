@@ -16,32 +16,56 @@
 html{scroll-behavior:smooth}
 body{font-family:"DM Sans",sans-serif;background:var(--lighter);color:var(--text);line-height:1.7}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,25,50,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:60px}
-.nav-logo{font-family:"Playfair Display",serif;color:var(--white);font-size:1.1rem;font-weight:700}.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;gap:1.5rem;list-style:none}
-.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,25,50,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:70px;transition:all 0.3s ease}
+.nav-logo{font-family:"Playfair Display",serif;color:var(--white);font-size:1.15rem;font-weight:700;letter-spacing:0.05em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.3s,padding 0.3s;position:relative;padding:0.5rem 0}
+.nav-links a::after{content:"";position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--gold);transition:width 0.3s ease}
 .nav-links a:hover{color:var(--gold-light)}
+.nav-links a:hover::after{width:100%}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:0.5rem}
+.hamburger span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s ease}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(8px,8px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
+.mobile-nav{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(11,25,50,0.99);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);flex-direction:column;gap:0;padding:0;max-height:calc(100vh - 70px);overflow-y:auto;animation:slideDown 0.3s ease;z-index:99}
+.mobile-nav a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.95rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;padding:1rem 2rem;border-bottom:1px solid rgba(255,255,255,0.05);transition:background 0.2s,color 0.2s}
+.mobile-nav a:hover{background:rgba(201,168,76,0.1);color:var(--gold-light)}
+.mobile-nav.active{display:flex!important}
+@keyframes slideDown{from{transform:translateY(-10px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(max-width:1024px){
+.nav-links{gap:1.8rem}
+.nav-links a{font-size:0.75rem}
+}
+@media(max-width:768px){
+nav{height:60px;padding:0 1.5rem}
+.nav-logo{font-size:1rem}
+.nav-links{display:none}
+.hamburger{display:flex}
+.mobile-nav{top:60px;max-height:calc(100vh - 60px)}
+}
 
-.hero{min-height:100vh;background:linear-gradient(160deg,var(--navy-deep) 0%,var(--navy) 55%,#1e4d8c 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:80px 2rem 4rem}
+.hero{min-height:100vh;background:linear-gradient(160deg,var(--navy-deep) 0%,var(--navy) 55%,#1e4d8c 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:100px 2rem 3rem}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 80% 20%,rgba(46,117,182,0.25) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 10% 80%,rgba(201,168,76,0.12) 0%,transparent 50%)}
 .hero-grid{position:absolute;inset:0;opacity:0.04;background-image:linear-gradient(rgba(255,255,255,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.5) 1px,transparent 1px);background-size:60px 60px}
 .hero-content{position:relative;z-index:1;max-width:860px;width:100%;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);border-radius:100px;padding:6px 18px;font-size:0.78rem;font-weight:500;color:var(--gold-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.8rem}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);border-radius:100px;padding:8px 20px;font-size:0.78rem;font-weight:500;color:var(--gold-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.8rem}
 .hero-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
-.hero-name{font-family:"Playfair Display",serif;font-size:clamp(2.8rem,6vw,4.5rem);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:1rem}
+.hero-name{font-family:"Playfair Display",serif;font-size:clamp(2.4rem,5.5vw,4.5rem);font-weight:700;color:var(--white);line-height:1.15;margin-bottom:1rem;letter-spacing:-0.02em}
 .hero-name span{color:var(--gold)}
-.hero-title{font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,0.65);font-weight:300;letter-spacing:0.04em;margin-bottom:2.5rem}
+.hero-title{font-size:clamp(0.95rem,1.8vw,1.2rem);color:rgba(255,255,255,0.65);font-weight:300;letter-spacing:0.04em;margin-bottom:2.5rem;line-height:1.6}
 .hero-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:3rem}
-.hero-tag{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:6px 16px;font-size:0.8rem;color:rgba(255,255,255,0.8)}
+.hero-tag{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:6px 14px;font-size:0.75rem;color:rgba(255,255,255,0.8);transition:all 0.3s}
+.hero-tag:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.3)}
 .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn-primary{background:var(--gold);color:var(--navy-deep);padding:13px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:background 0.2s,transform 0.15s;display:inline-block}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-1px)}
-.btn-secondary{background:transparent;color:var(--white);padding:13px 32px;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;border:1px solid rgba(255,255,255,0.3);transition:border-color 0.2s,background 0.2s,transform 0.15s;display:inline-block}
-.btn-secondary:hover{border-color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.05);transform:translateY(-1px)}
-.hero-stats{display:flex;justify-content:center;margin-top:5rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,0.1)}
-.stat{flex:1;max-width:200px;text-align:center;padding:0 1.5rem;border-right:1px solid rgba(255,255,255,0.1)}
-.stat:last-child{border-right:none}
-.stat-num{font-family:"Playfair Display",serif;font-size:2.2rem;font-weight:700;color:var(--gold);display:block;line-height:1;margin-bottom:4px}
+.btn-primary{background:var(--gold);color:var(--navy-deep);padding:14px 36px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:background 0.3s,transform 0.15s;display:inline-block;border:none;cursor:pointer;letter-spacing:0.05em}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,0.3)}
+.btn-secondary{background:transparent;color:var(--white);padding:14px 36px;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.9rem;border:1.5px solid rgba(255,255,255,0.3);transition:all 0.3s;display:inline-block;cursor:pointer;letter-spacing:0.05em}
+.btn-secondary:hover{border-color:rgba(255,255,255,0.8);background:rgba(255,255,255,0.08);transform:translateY(-2px)}
+.hero-stats{display:flex;justify-content:center;margin-top:5rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,0.1);gap:2rem}
+.stat{flex:1;max-width:200px;text-align:center;padding:0 1.5rem}
+.stat-num{font-family:"Playfair Display",serif;font-size:2.2rem;font-weight:700;color:var(--gold);display:block;line-height:1;margin-bottom:6px}
 .stat-label{font-size:0.75rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.08em}
 
 section{padding:5rem 2rem}
@@ -169,15 +193,30 @@ section{padding:5rem 2rem}
 
 footer{background:var(--navy-deep);text-align:center;padding:1.5rem;font-size:0.78rem;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.06)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-@media(max-width:700px){
-  .about-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}
-  .doc-previews,.rfti-grid{grid-template-columns:1fr 1fr}
-  .hero-stats{flex-direction:column;gap:1.5rem}
-  .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:1.5rem}
-  .stat:last-child{border-bottom:none}
-  nav{padding:0 1rem}
-  .nav-links{gap:0.8rem}
-  .nav-links a{font-size:0.68rem}
+@media(max-width:1200px){
+section{padding:4rem 1.5rem}
+.container{max-width:900px}
+}
+@media(max-width:768px){
+section{padding:3.5rem 1.5rem}
+.container{max-width:100%;padding:0 1.5rem}
+.about-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}
+.doc-previews,.rfti-grid{grid-template-columns:1fr 1fr}
+.hero-stats{flex-direction:column;gap:1.5rem;border-top:none;padding-top:2rem}
+.stat{border-right:none;border-bottom:none;padding:0}
+.project-card{margin-bottom:1.5rem}
+}
+@media(max-width:600px){
+section{padding:3rem 1rem}
+.container{padding:0 1rem}
+.hero-cta{flex-direction:column;align-items:stretch}
+.btn-primary,.btn-secondary{width:100%;text-align:center}
+.hero-tags{gap:8px}
+.hero-tag{font-size:0.7rem;padding:5px 12px}
+.doc-previews,.rfti-grid{grid-template-columns:1fr}
+.project-card{margin-bottom:1rem}
+.project-body{padding:1.5rem}
+.project-header{padding:1.5rem}
 }
 </style>
 </head>
@@ -190,10 +229,24 @@ footer{background:var(--navy-deep);text-align:center;padding:1.5rem;font-size:0.
     <li><a href="#photos">Site Work</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">CAAP Project</a></li>
-    <li><a href="#converge-project">Converge / Metroworks</a></li>
+    <li><a href="#converge-project">Converge</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about">About</a>
+  <a href="#photos">Site Work</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">CAAP Project</a>
+  <a href="#converge-project">Converge</a>
+  <a href="#contact">Contact</a>
+</div>
 
 <section class="hero">
   <div class="hero-grid"></div>
@@ -288,28 +341,28 @@ footer{background:var(--navy-deep);text-align:center;padding:1.5rem;font-size:0.
             <div class="slide-overlay"></div>
           </div>
         </div>
-      </div>
-      <div class="carousel-controls">
-        <button class="carousel-btn prev" id="prevBtn" aria-label="Previous slide">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-        <button class="carousel-btn next" id="nextBtn" aria-label="Next slide">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
-      </div>
-      <div class="carousel-indicators" id="carouselIndicators">
-        <button class="indicator active" data-index="0" aria-label="Slide 1"></button>
-        <button class="indicator" data-index="1" aria-label="Slide 2"></button>
-        <button class="indicator" data-index="2" aria-label="Slide 3"></button>
-        <button class="indicator" data-index="3" aria-label="Slide 4"></button>
-      </div>
-      <div class="carousel-caption" id="carouselCaption">
-        <span class="carousel-caption-tag" id="captionTag">Site Inspection</span>
-        <p class="carousel-caption-text" id="captionText">On-site drawing review and structural inspection — Davao International Airport PTB Rehabilitation</p>
+        <div class="carousel-controls">
+          <button class="carousel-btn prev" id="prevBtn" aria-label="Previous slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="carousel-btn next" id="nextBtn" aria-label="Next slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+        <div class="carousel-indicators" id="carouselIndicators">
+          <button class="indicator active" data-index="0" aria-label="Slide 1"></button>
+          <button class="indicator" data-index="1" aria-label="Slide 2"></button>
+          <button class="indicator" data-index="2" aria-label="Slide 3"></button>
+          <button class="indicator" data-index="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-caption" id="carouselCaption">
+          <span class="carousel-caption-tag" id="captionTag">Site Inspection</span>
+          <p class="carousel-caption-text" id="captionText">On-site drawing review and structural inspection — Davao International Airport PTB Rehabilitation</p>
+        </div>
       </div>
     </div>
   </div>
@@ -602,6 +655,37 @@ footer{background:var(--navy-deep);text-align:center;padding:1.5rem;font-size:0.
   // Initialize
   updateCaption();
   startAutoplay();
+})();
+
+// Hamburger Menu
+(function() {
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  
+  hamburger?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hamburger.classList.toggle('active');
+    mobileNav.classList.toggle('active');
+  });
+
+  // Close menu when link is clicked
+  const navLinks = mobileNav?.querySelectorAll('a');
+  navLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileNav.classList.remove('active');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (hamburger && mobileNav && hamburger.classList.contains('active')) {
+      if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+      }
+    }
+  });
 })();
 </script>
 </body>
