@@ -162,6 +162,78 @@ section{padding:5rem 2rem}
 .doc-thumb:hover img{transform:scale(1.03)}
 .doc-caption{padding:8px 12px;background:var(--lighter);font-size:0.72rem;color:var(--gray);font-weight:500;text-align:center}
 
+/* Gallery Modal Carousel */
+.gallery-thumb{cursor:pointer;position:relative;overflow:hidden;border-radius:12px 12px 0 0;transition:transform 0.3s,box-shadow 0.3s;display:flex;align-items:center;justify-content:center;background:#f5f5f5;height:180px;flex:1}
+.gallery-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s;display:block}
+.gallery-thumb:hover img{transform:scale(1.05)}
+.gallery-item-wrapper{display:flex;flex-direction:column;cursor:pointer;border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}
+.gallery-item-wrapper:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(27,58,107,0.15)}
+.gallery-thumb::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(201,168,76,0.2) 0%,rgba(0,0,0,0.3) 100%);pointer-events:none;opacity:0;transition:opacity 0.3s}
+.gallery-thumb:hover::after{opacity:1}
+.gallery-thumb .magnifier{position:absolute;width:40px;height:40px;background:rgba(255,255,255,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;opacity:0;transition:opacity 0.3s,transform 0.3s;transform:scale(0.8)}
+.gallery-thumb:hover .magnifier{opacity:1;transform:scale(1)}
+.gallery-thumb .magnifier svg{width:20px;height:20px;color:var(--navy-deep);stroke-width:2.5}
+.gallery-caption{padding:10px 12px;background:var(--lighter);font-size:0.72rem;color:var(--gray);font-weight:500;text-align:center;border-top:1px solid var(--border);flex-shrink:0}
+
+/* Modal */
+.gallery-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:1000;animation:fadeIn 0.3s ease;backdrop-filter:blur(4px)}
+.gallery-modal.active{display:flex;align-items:center;justify-content:center}
+.modal-content{position:relative;width:90%;max-width:1000px;height:auto;max-height:90vh;background:rgba(15,35,71,0.4);border:1px solid rgba(201,168,76,0.2);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;animation:slideUp 0.4s cubic-bezier(0.34,1.56,0.64,1)}
+.modal-track-wrapper{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center}
+.modal-track{display:flex;width:100%;height:100%;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1)}
+.modal-slide{flex:0 0 100%;width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative;background:#000}
+.modal-slide img{width:100%;height:100%;object-fit:contain;display:block;animation:parallaxZoom 0.8s ease-out}
+.modal-slide.active img{animation:parallaxZoom 0.8s ease-out}
+@keyframes parallaxZoom{from{transform:scale(0.95);opacity:0}to{transform:scale(1);opacity:1}}
+.modal-overlay{position:absolute;inset:0;background:linear-gradient(45deg,rgba(46,117,182,0.1) 0%,rgba(201,168,76,0.05) 100%);pointer-events:none}
+
+.modal-controls{position:absolute;top:50%;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:0 1.5rem;z-index:10;transform:translateY(-50%);pointer-events:none}
+.modal-btn{background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);color:#fff;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s;font-size:0;padding:0;pointer-events:all;backdrop-filter:blur(8px)}
+.modal-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.6);transform:scale(1.1)}
+.modal-btn svg{width:24px;height:24px;color:#fff;stroke-width:2}
+
+.modal-indicators{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:9}
+.modal-indicator{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.3);border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;transition:all 0.3s}
+.modal-indicator.active{background:var(--gold);border-color:var(--gold);transform:scale(1.3);box-shadow:0 0 12px rgba(201,168,76,0.8)}
+.modal-indicator:hover{background:rgba(255,255,255,0.5)}
+
+.modal-info{background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 60%,rgba(0,0,0,0.95) 100%);padding:2rem 1.5rem 1.5rem;flex-shrink:0;min-height:auto}
+.modal-counter{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.8rem}
+.modal-slide-count{color:rgba(255,255,255,0.6);font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase}
+.modal-close{background:none;border:none;color:rgba(255,255,255,0.7);cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;padding:0}
+.modal-close:hover{color:var(--gold-light);transform:rotate(90deg)}
+.modal-close svg{width:20px;height:20px;stroke-width:2.5}
+.modal-title{color:rgba(255,255,255,0.9);font-size:0.95rem;line-height:1.5;word-break:break-word}
+
+.modal-header-bar{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid rgba(255,255,255,0.1);background:rgba(0,0,0,0.3)}
+.modal-project-name{color:var(--gold-light);font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase}
+
+@keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+@media(max-width:768px){
+.modal-content{width:95%;max-height:95vh;max-width:100%}
+.modal-track-wrapper{min-height:350px}
+.modal-controls{padding:0 1rem}
+.modal-btn{width:44px;height:44px}
+.modal-btn svg{width:20px;height:20px}
+.modal-info{padding:1.5rem 1.2rem 1.2rem}
+.modal-title{font-size:0.85rem}
+.modal-header-bar{padding:0.8rem 1.2rem}
+}
+@media(max-width:480px){
+.modal-content{width:100%;border-radius:8px}
+.modal-track-wrapper{min-height:280px}
+.modal-controls{padding:0 0.8rem}
+.modal-btn{width:40px;height:40px}
+.modal-btn svg{width:18px;height:18px}
+.modal-info{padding:1.2rem 1rem 1rem}
+.modal-title{font-size:0.78rem}
+.modal-indicators{bottom:1rem;gap:6px}
+.modal-indicator{width:8px;height:8px}
+.gallery-thumb{min-height:140px}
+}
+
 #converge-project{background:var(--lighter)}
 
 .rfti-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(39,174,96,0.15);border:1px solid rgba(39,174,96,0.4);color:#27ae60;font-size:0.75rem;font-weight:700;padding:5px 14px;border-radius:100px;letter-spacing:0.08em;margin-bottom:1.2rem;text-transform:uppercase}
@@ -435,19 +507,28 @@ section{padding:3rem 1rem}
           <li>Reviewed and approved material submittals</li>
           <li>Monitored material usage, verified quantities, and controlled wastage throughout all active construction phases</li>
         </ul>
-        <p style="font-size:0.78rem;font-weight:600;color:var(--gray-light);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem">Actual QA/QC Documents (Confidential details redacted)</p>
+        <p style="font-size:0.78rem;font-weight:600;color:var(--gray-light);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem">SAMPLE WORKS</p>
         <div class="doc-previews">
-          <div class="doc-thumb">
-            <img src="" alt="Signage Materials Transmittal">
-            <div class="doc-caption">Signage Materials Transmittal</div>
+          <div class="gallery-item-wrapper">
+            <div class="gallery-thumb" id="caap-pow" data-project="pow">
+              <img src="imgs/caap/pow/POW 1.png" alt="Proof of Work Sample">
+              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
+            </div>
+            <div class="gallery-caption">SAMPLE POW PTB</div>
           </div>
-          <div class="doc-thumb">
-            <img src="" alt="Tiles Layout Transmittal">
-            <div class="doc-caption">Tiles Layout Transmittal</div>
+          <div class="gallery-item-wrapper">
+            <div class="gallery-thumb" id="caap-boq" data-project="boq">
+              <img src="imgs/caap/boq/BOQ 1.png" alt="Bill of Quantities Sample">
+              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
+            </div>
+            <div class="gallery-caption">SAMPLE BOQ's</div>
           </div>
-          <div class="doc-thumb">
-            <img src="" alt="ACP Cutting List">
-            <div class="doc-caption">ACP Cladding Cutting List</div>
+          <div class="gallery-item-wrapper">
+            <div class="gallery-thumb" id="caap-planswift" data-project="planswift">
+              <img src="imgs/caap/planswift/PLANSWIFT 1.png" alt="Planswift Sample">
+              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
+            </div>
+            <div class="gallery-caption">SAMPLE PLANSWIFT WORKS</div>
           </div>
         </div>
       </div>
@@ -655,6 +736,35 @@ section{padding:3rem 1rem}
 
 <footer>&copy; 2026 Jonathan Jed Resurreccion &middot; Construction Estimator &amp; Virtual Assistant &middot; All rights reserved</footer>
 
+<!-- Image Gallery Modal -->
+<div class="gallery-modal" id="galleryModal">
+  <div class="modal-content">
+    <div class="modal-header-bar">
+      <div class="modal-project-name" id="modalProjectName">Gallery</div>
+      <button class="modal-close" id="modalClose" aria-label="Close gallery">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="modal-track-wrapper">
+      <div class="modal-track" id="modalTrack"></div>
+      <div class="modal-overlay"></div>
+      <div class="modal-controls">
+        <button class="modal-btn prev" id="modalPrev" aria-label="Previous image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="modal-btn next" id="modalNext" aria-label="Next image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+      <div class="modal-indicators" id="modalIndicators"></div>
+    </div>
+    <div class="modal-info">
+      <div class="modal-counter"><span class="modal-slide-count"><span id="currentSlide">1</span> / <span id="totalSlides">1</span></span></div>
+      <div class="modal-title" id="modalTitle">Image Gallery</div>
+    </div>
+  </div>
+</div>
+
 <script>
 (function() {
   let currentIndex = 0;
@@ -773,6 +883,166 @@ section{padding:3rem 1rem}
       }
     }
   });
+})();
+
+// Gallery Modal Carousel
+(function() {
+  const galleryModal = document.getElementById('galleryModal');
+  const modalTrack = document.getElementById('modalTrack');
+  const modalPrev = document.getElementById('modalPrev');
+  const modalNext = document.getElementById('modalNext');
+  const modalClose = document.getElementById('modalClose');
+  const modalIndicators = document.getElementById('modalIndicators');
+  const modalProjectName = document.getElementById('modalProjectName');
+  const currentSlideSpan = document.getElementById('currentSlide');
+  const totalSlidesSpan = document.getElementById('totalSlides');
+
+  const projectImages = {
+    pow: ['POW 1.png', 'POW 2.png'],
+    boq: ['BOQ 1.png', 'BOQ 2.png', 'BOQ 3.png'],
+    planswift: ['PLANSWIFT 1.png', 'PLANSWIFT 2.png', 'PLANSWIFT 3.png']
+  };
+
+  const projectTitles = {
+    pow: 'Proof of Work Documentation',
+    boq: 'Bill of Quantities Analysis',
+    planswift: 'Planswift Quantity Takeoffs'
+  };
+
+  const projectPaths = {
+    pow: 'imgs/caap/pow/',
+    boq: 'imgs/caap/boq/',
+    planswift: 'imgs/caap/planswift/'
+  };
+
+  let currentProject = null;
+  let currentIndex = 0;
+  let totalSlides = 0;
+
+  function initializeGallery(project) {
+    currentProject = project;
+    currentIndex = 0;
+    totalSlides = projectImages[project].length;
+
+    // Clear previous slides
+    modalTrack.innerHTML = '';
+    modalIndicators.innerHTML = '';
+
+    // Create slides
+    projectImages[project].forEach((imageName, index) => {
+      const slide = document.createElement('div');
+      slide.className = 'modal-slide' + (index === 0 ? ' active' : '');
+      slide.innerHTML = `<img src="${projectPaths[project]}${imageName}" alt="Image ${index + 1}" loading="lazy">`;
+      modalTrack.appendChild(slide);
+
+      // Create indicator
+      const indicator = document.createElement('button');
+      indicator.className = 'modal-indicator' + (index === 0 ? ' active' : '');
+      indicator.dataset.index = index;
+      indicator.addEventListener('click', () => goToSlide(index));
+      modalIndicators.appendChild(indicator);
+    });
+
+    // Update info
+    modalProjectName.textContent = projectTitles[project];
+    totalSlidesSpan.textContent = totalSlides;
+    updateSlideCounter();
+  }
+
+  function updateCarousel() {
+    const offset = -currentIndex * 100;
+    modalTrack.style.transform = `translateX(${offset}%)`;
+
+    const slides = modalTrack.querySelectorAll('.modal-slide');
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === currentIndex);
+    });
+
+    const indicators = modalIndicators.querySelectorAll('.modal-indicator');
+    indicators.forEach((indicator, index) => {
+      indicator.classList.toggle('active', index === currentIndex);
+    });
+
+    updateSlideCounter();
+  }
+
+  function updateSlideCounter() {
+    currentSlideSpan.textContent = currentIndex + 1;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+    updateCarousel();
+  }
+
+  function openGallery(project) {
+    initializeGallery(project);
+    galleryModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeGallery() {
+    galleryModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Event listeners
+  modalPrev.addEventListener('click', prevSlide);
+  modalNext.addEventListener('click', nextSlide);
+  modalClose.addEventListener('click', closeGallery);
+
+  // Close modal when clicking outside
+  galleryModal.addEventListener('click', (e) => {
+    if (e.target === galleryModal) {
+      closeGallery();
+    }
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (galleryModal.classList.contains('active')) {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'Escape') closeGallery();
+    }
+  });
+
+  // Gallery thumbnails click handlers
+  document.getElementById('caap-pow')?.addEventListener('click', () => openGallery('pow'));
+  document.getElementById('caap-boq')?.addEventListener('click', () => openGallery('boq'));
+  document.getElementById('caap-planswift')?.addEventListener('click', () => openGallery('planswift'));
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  galleryModal.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, false);
+
+  galleryModal.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, false);
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) nextSlide();
+      else prevSlide();
+    }
+  }
 })();
 </script>
 </body>
