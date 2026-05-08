@@ -564,55 +564,26 @@ section{padding:3rem 1rem}
           <li>Supervised overall construction activities including reinforced concrete slab works, structural rebar inspections, formworks, concrete pouring operations, elevation checking, and quality assurance inspections on-site</li>
           <li>Coordinated daily construction operations with contractors, consultants, and project stakeholders to ensure compliance with approved plans, specifications, project schedules, and safety standards</li>
           <li>Ensured compliance with engineering standards, QA/QC procedures, occupational safety requirements, and construction best practices throughout all project phases</li>
-          <li>Achieved RFTI certification on both sites confirming all minimum requirements completed</li>
-          <li>Prepared and managed all as-built documentation, technical reports, and compliance records from design through completion</li>
         </ul>
 
-        <p style="font-size:0.78rem;font-weight:600;color:var(--gray-light);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;margin-top:1.5rem">Detailed Engineering Drawings &mdash; Outside Plant Design</p>
+        <p style="font-size:0.78rem;font-weight:600;color:var(--gray-light);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;margin-top:1.5rem">SAMPLE WORKS</p>
         <div class="doc-previews">
-          <div class="doc-thumb">
-            <img src="" alt="GSS001 Outside Plant Design">
-            <div class="doc-caption">GSS001 Cover &mdash; Outside Plant Design</div>
+          <div class="gallery-item-wrapper">
+            <div class="gallery-thumb" id="converge-project-plans" data-project="converge-plans">
+              <img src="imgs/converge/project-plans/PLAN 1.png" alt="Project Plans Sample">
+              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
+            </div>
+            <div class="gallery-caption">PROJECT PLANS</div>
           </div>
-          <div class="doc-thumb">
-            <img src="" alt="Site Development Plan">
-            <div class="doc-caption">Site Development Plan</div>
-          </div>
-          <div class="doc-thumb">
-            <img src="" alt="Proposed Room Development Plan">
-            <div class="doc-caption">Proposed Room Development Plan</div>
+          <div class="gallery-item-wrapper">
+            <div class="gallery-thumb" id="converge-cable-landing-station" data-project="converge-cables">
+              <img src="imgs/converge/cable-landing-station/PHOTO 1.jfif" alt="Cable Landing Station Sample">
+              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
+            </div>
+            <div class="gallery-caption">DAVAO INTERNATIONAL CABLE LANDING STATION</div>
           </div>
         </div>
 
-        <p style="font-size:0.78rem;font-weight:600;color:var(--gray-light);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;margin-top:2rem">RFTI Completion Documentation &mdash; GSS001 &amp; GSS003</p>
-        <div class="rfti-grid">
-          <div class="rfti-item">
-            <img src="" alt="RFTI Certificate GSS003">
-            <div class="rfti-label">RFTI &mdash; GSS003 Cover</div>
-          </div>
-          <div class="rfti-item">
-            <img src="" alt="ACPDB Installed">
-            <div class="rfti-label">ACPDB Installed</div>
-          </div>
-          <div class="rfti-item">
-            <img src="" alt="Open Bay Racks">
-            <div class="rfti-label">Open Bay &amp; Cable Manager</div>
-          </div>
-          <div class="rfti-item">
-            <img src="" alt="RFTI GSS001 Cover">
-            <div class="rfti-label">RFTI &mdash; GSS001 Cover</div>
-          </div>
-          <div class="rfti-item">
-            <img src="" alt="Cable Ladder with Grounding">
-            <div class="rfti-label">Cable Ladder &amp; Grounding System</div>
-          </div>
-          <div class="rfti-item" style="background:var(--navy);display:flex;align-items:center;justify-content:center;min-height:160px">
-            <div style="text-align:center;padding:1rem">
-              <div style="font-size:2rem;margin-bottom:0.5rem">✓</div>
-              <div style="font-size:0.8rem;color:var(--gold-light);font-weight:600">Both Sites<br>RFTI Certified</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -900,19 +871,25 @@ section{padding:3rem 1rem}
   const projectImages = {
     pow: ['POW 1.png', 'POW 2.png'],
     boq: ['BOQ 1.png', 'BOQ 2.png', 'BOQ 3.png'],
-    planswift: ['PLANSWIFT 1.png', 'PLANSWIFT 2.png', 'PLANSWIFT 3.png']
+    planswift: ['PLANSWIFT 1.png', 'PLANSWIFT 2.png', 'PLANSWIFT 3.png'],
+    'converge-plans': ['PLAN 1.png', 'PLAN 2.png', 'PLAN 3.png', 'PLAN 4.png', 'PLAN 5.png', 'PLAN 6.png', 'PLAN 7.png', 'PLAN 8.png', 'PLAN 9.png', 'PLAN 10.png', 'PLAN 11.png', 'PLAN 12.png', 'PLAN 13.png', 'PLAN 14.png'],
+    'converge-cables': ['PHOTO 1.jfif', 'PHOTO 2.jfif', 'PHOTO 3.jfif']
   };
 
   const projectTitles = {
     pow: 'Proof of Work Documentation',
     boq: 'Bill of Quantities Analysis',
-    planswift: 'Planswift Quantity Takeoffs'
+    planswift: 'Planswift Quantity Takeoffs',
+    'converge-plans': 'Project Engineering Plans',
+    'converge-cables': 'Davao International Cable Landing Station'
   };
 
   const projectPaths = {
     pow: 'imgs/caap/pow/',
     boq: 'imgs/caap/boq/',
-    planswift: 'imgs/caap/planswift/'
+    planswift: 'imgs/caap/planswift/',
+    'converge-plans': 'imgs/converge/project-plans/',
+    'converge-cables': 'imgs/converge/cable-landing-station/'
   };
 
   let currentProject = null;
@@ -1021,6 +998,17 @@ section{padding:3rem 1rem}
   document.getElementById('caap-pow')?.addEventListener('click', () => openGallery('pow'));
   document.getElementById('caap-boq')?.addEventListener('click', () => openGallery('boq'));
   document.getElementById('caap-planswift')?.addEventListener('click', () => openGallery('planswift'));
+  document.getElementById('converge-project-plans')?.addEventListener('click', () => openGallery('converge-plans'));
+  document.getElementById('converge-cable-landing-station')?.addEventListener('click', () => openGallery('converge-cables'));
+
+  // Make wrapper divs clickable too
+  document.querySelectorAll('.gallery-item-wrapper').forEach(wrapper => {
+    wrapper.style.cursor = 'pointer';
+    const project = wrapper.querySelector('.gallery-thumb')?.dataset.project;
+    if (project) {
+      wrapper.addEventListener('click', () => openGallery(project));
+    }
+  });
 
   // Touch/swipe support
   let touchStartX = 0;
