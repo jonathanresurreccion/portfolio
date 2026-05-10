@@ -633,6 +633,13 @@ section{padding:2.8rem 1rem}
             </div>
             <div class="gallery-caption">SAMPLE PLANSWIFT WORKS</div>
           </div>
+          <div class="gallery-item-wrapper">
+            <div class="gallery-thumb" id="caap-transmittals" data-project="transmittal">
+              <img src="imgs/caap/transmittal/SAMPLE TRANSMITTALS 1.png" alt="transmittal samples">
+              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
+            </div>
+            <div class="gallery-caption">SAMPLE TRANSMITTALS</div>
+          </div>
         </div>
       </div>
     </div>
@@ -732,24 +739,6 @@ section{padding:2.8rem 1rem}
             <li>Enhancing customer communication</li>
           </ul>
         </div>
-
-        <div>
-          <h5>
-            STEPS:
-          </h5><br>
-          <ul class="deliverable-list">
-            <li>Step 1 &mdash; Customer Reservation Form</li>
-            <li>Step 2 &mdash; Connect Google Sheets in Make.com</li>
-            <li>Step 3 &mdash; Set Google Forms Trigger</li>
-            <li>Step 4 &mdash; Store Reservation Data</li>
-            <li>Step 5 &mdash; AI Router & Schedule Distribution</li>
-            <li>Step 6 &mdash; Update Reservation Status</li>
-            <li>Step 7 &mdash; Send Confirmation Email to Customer</li>
-            <li>Step 8 &mdash; Notify Restaurant Staff</li>
-            <li>Step 9 &mdash; Automation Active</li>
-          </ul>
-        </div>
-
 
         <p style="font-size:0.78rem;font-weight:600;color:var(--gray-light);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;margin-top:1.5rem">SAMPLE WORKFLOW</p>
         <div class="doc-previews">
@@ -970,6 +959,7 @@ section{padding:2.8rem 1rem}
     pow: ['POW 1.png', 'POW 2.png'],
     boq: ['BOQ 1.png', 'BOQ 2.png', 'BOQ 3.png'],
     planswift: ['PLANSWIFT 1.png', 'PLANSWIFT 2.png', 'PLANSWIFT 3.png'],
+    transmittal: ['SAMPLE TRANSMITTALS 1.png', 'SAMPLE TRANSMITTALS 2.png', 'SAMPLE TRANSMITTALS 3.png'],
     'converge-plans': ['PLAN 1.png', 'PLAN 2.png', 'PLAN 3.png', 'PLAN 4.png', 'PLAN 5.png', 'PLAN 6.png', 'PLAN 7.png', 'PLAN 8.png', 'PLAN 9.png', 'PLAN 10.png', 'PLAN 11.png', 'PLAN 12.png', 'PLAN 13.png', 'PLAN 14.png'],
     'converge-cables': ['PHOTO 1.jfif', 'PHOTO 2.jfif', 'PHOTO 3.jfif'],
     lunavista: ['STEP 1.png', 'STEP 2.png', 'STEP 2.1.png', 'STEP 3.png', 'STEP 4.png', 'STEP 5.png', 'STEP 5.1.png', 'STEP 6.png', 'STEP 7.png', 'STEP 8.png', 'STEP 9.png']
@@ -979,6 +969,7 @@ section{padding:2.8rem 1rem}
     pow: 'Proof of Work Documentation',
     boq: 'Bill of Quantities Analysis',
     planswift: 'Planswift Quantity Takeoffs',
+    transmittal: 'Sample Transmittals',
     'converge-plans': 'Project Engineering Plans',
     'converge-cables': 'Davao International Cable Landing Station',
     lunavista: 'LunaVista Restaurant Reservation Workflow'
@@ -988,6 +979,7 @@ section{padding:2.8rem 1rem}
     pow: 'imgs/caap/pow/',
     boq: 'imgs/caap/boq/',
     planswift: 'imgs/caap/planswift/',
+    transmittal: 'imgs/caap/transmittal/',
     'converge-plans': 'imgs/converge/project-plans/',
     'converge-cables': 'imgs/converge/cable-landing-station/',
     lunavista: 'imgs/ai/'
@@ -1099,6 +1091,7 @@ section{padding:2.8rem 1rem}
   document.getElementById('caap-pow')?.addEventListener('click', () => openGallery('pow'));
   document.getElementById('caap-boq')?.addEventListener('click', () => openGallery('boq'));
   document.getElementById('caap-planswift')?.addEventListener('click', () => openGallery('planswift'));
+  document.getElementById('caap-transmittals')?.addEventListener('click', () => openGallery('transmittal'));
   document.getElementById('converge-project-plans')?.addEventListener('click', () => openGallery('converge-plans'));
   document.getElementById('converge-cable-landing-station')?.addEventListener('click', () => openGallery('converge-cables'));
   document.getElementById('lunavista-workflow')?.addEventListener('click', () => openGallery('lunavista'));
