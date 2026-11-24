@@ -1,0 +1,452 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T08:54:34+00:00",
+  "title": "Design System: Jonathan Jed Resurreccion, Field Book",
+  "extensions": {
+    "colorMeta": {
+      "cover-yellow": {
+        "role": "primary",
+        "displayName": "Weather-Cover Yellow",
+        "canonical": "oklch(83.3% 0.170 91)",
+        "tonalRamp": [
+          "#190600",
+          "#372000",
+          "#593D00",
+          "#7D5C00",
+          "#A37D00",
+          "#CA9F00",
+          "#F3C308",
+          "#FFEC97"
+        ]
+      },
+      "cover-ink-soft": {
+        "role": "neutral",
+        "displayName": "Cover Ink Soft",
+        "canonical": "oklch(32.7% 0.068 100)",
+        "tonalRamp": [
+          "#110A00",
+          "#2D2500",
+          "#4A4314",
+          "#69623B",
+          "#898360",
+          "#ABA687",
+          "#CECAAF",
+          "#F1EFDF"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "canonical": "oklch(98.7% 0.004 106)",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#252524",
+          "#424241",
+          "#61615F",
+          "#828280",
+          "#A5A5A3",
+          "#C9C9C7",
+          "#EEEEEC"
+        ]
+      },
+      "label-white": {
+        "role": "neutral",
+        "displayName": "Label White",
+        "canonical": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#A5A5A5",
+          "#C9C9C9",
+          "#EEEEEE"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Ruling Green-Blue",
+        "canonical": "oklch(89.5% 0.016 167)",
+        "tonalRamp": [
+          "#080C0A",
+          "#212724",
+          "#3D4441",
+          "#5B6360",
+          "#7B8581",
+          "#9DA8A3",
+          "#C0CDC7",
+          "#E8F1ED"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Ruling",
+        "canonical": "oklch(78.8% 0.028 170)",
+        "tonalRamp": [
+          "#060D0A",
+          "#1D2824",
+          "#384540",
+          "#55655F",
+          "#758780",
+          "#95ABA2",
+          "#B9CFC6",
+          "#E4F2ED"
+        ]
+      },
+      "margin-red": {
+        "role": "secondary",
+        "displayName": "Margin Red",
+        "canonical": "oklch(55.5% 0.184 29)",
+        "tonalRamp": [
+          "#290000",
+          "#520000",
+          "#7F0908",
+          "#AD2820",
+          "#D64E42",
+          "#F57C6D",
+          "#FFA899",
+          "#FFDDD3"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Field Ink",
+        "canonical": "oklch(21.2% 0.005 248)",
+        "tonalRamp": [
+          "#0A0B0D",
+          "#232527",
+          "#404244",
+          "#5F6163",
+          "#818284",
+          "#A3A5A7",
+          "#C8C9CB",
+          "#EEEEEF"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "oklch(36.8% 0.008 234)",
+        "tonalRamp": [
+          "#090C0E",
+          "#222628",
+          "#3E4346",
+          "#5D6265",
+          "#7F8386",
+          "#A2A6A8",
+          "#C6CACC",
+          "#EDEFF0"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Graphite",
+        "canonical": "oklch(49.9% 0.011 233)",
+        "tonalRamp": [
+          "#090C0D",
+          "#212628",
+          "#3D4346",
+          "#5B6266",
+          "#7D8387",
+          "#A0A6A9",
+          "#C5CACD",
+          "#ECEFF0"
+        ]
+      },
+      "pen-blue": {
+        "role": "tertiary",
+        "displayName": "Pen Blue",
+        "canonical": "oklch(43.4% 0.147 262)",
+        "tonalRamp": [
+          "#000135",
+          "#001D5E",
+          "#133C8A",
+          "#335DAE",
+          "#5A81CA",
+          "#82A5E5",
+          "#ABCAFF",
+          "#DEEFFF"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Night",
+        "canonical": "oklch(19.0% 0.005 248)",
+        "tonalRamp": [
+          "#0A0B0D",
+          "#232527",
+          "#404244",
+          "#5F6163",
+          "#818284",
+          "#A3A5A7",
+          "#C8C9CB",
+          "#EEEEEF"
+        ]
+      },
+      "night-line": {
+        "role": "neutral",
+        "displayName": "Night Line",
+        "canonical": "oklch(29.9% 0.009 248)",
+        "tonalRamp": [
+          "#090B0E",
+          "#222529",
+          "#3F4246",
+          "#5E6265",
+          "#7F8386",
+          "#A2A5A9",
+          "#C7C9CC",
+          "#EDEFF0"
+        ]
+      },
+      "night-muted": {
+        "role": "neutral",
+        "displayName": "Night Muted",
+        "canonical": "oklch(73.2% 0.010 243)",
+        "tonalRamp": [
+          "#090B0D",
+          "#232528",
+          "#3F4245",
+          "#5D6265",
+          "#7E8387",
+          "#A0A6AB",
+          "#C4CACF",
+          "#EBEFF2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name on the cover only; heavy, 82% width, capped at 6rem."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "One per page section, booked right of the margin; 82% width, balanced wrap."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Entry titles (employer, project) and card titles."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Section intros and the cover lead, max 38em."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs and bulleted claims, max 40-44em; tabular lining figures."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Meta lines, dates, captions, button text at 600."
+      },
+      "label": {
+        "displayName": "Field Label",
+        "purpose": "Uppercase tracked field names in field/value rows; never a kicker above a heading."
+      }
+    },
+    "shadows": [
+      {
+        "name": "tip-in",
+        "value": "0 22px 40px -18px rgba(40,30,0,.55), 0 2px 6px rgba(40,30,0,.2)",
+        "purpose": "The tipped-in cover photo only; the one lifted object."
+      },
+      {
+        "name": "rule-line",
+        "value": "0 1px 0 #A9C0B7",
+        "purpose": "Zero-blur hairline under the scrolled nav and mobile menu; a ruling, not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "House ease for every transition."
+      },
+      {
+        "name": "state",
+        "value": "0.2s",
+        "purpose": "Hover/focus color and border swaps."
+      },
+      {
+        "name": "tipIn",
+        "value": "1.1s ease .15s; from translate(18px,-10px) rotate(4deg)",
+        "purpose": "The page's one entrance: the cover photo settles onto the cover at 1.25deg."
+      },
+      {
+        "name": "lbIn",
+        "value": "0.25s opacity fade",
+        "purpose": "Lightbox dialog open; images fade in over 0.3s on load."
+      },
+      {
+        "name": "image-zoom",
+        "value": "transform .6s; scale 1.03-1.04 on hover",
+        "purpose": "Photo and document thumbnails on hover."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation and transition none",
+        "purpose": "All motion removed under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1100px"
+      },
+      {
+        "name": "tablet",
+        "value": "980px"
+      },
+      {
+        "name": "margin-collapse",
+        "value": "760px"
+      },
+      {
+        "name": "phone",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Solid Button",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Primary action on covers and nav (Email me, Download CV): ink fill, yellow text, empties on hover.",
+      "html": "<a class=\"ds-btn ds-btn-solid\" href=\"#\">Email me <svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" aria-hidden=\"true\"><path d=\"M3 10h13M11 5l5 5-5 5\"/></svg></a>",
+      "css": ".ds-btn{font-family:Archivo,ui-sans-serif,system-ui,sans-serif;display:inline-flex;align-items:center;gap:.625rem;min-height:52px;padding:0 1.5rem;border:2px solid #17191B;border-radius:0;font-size:.875rem;font-weight:600;letter-spacing:.02em;line-height:1;text-decoration:none;transition:background-color .2s cubic-bezier(.16,1,.3,1),color .2s cubic-bezier(.16,1,.3,1)} .ds-btn svg{width:18px;height:18px} .ds-btn-solid{background:#17191B;color:#F2C200} .ds-btn-solid:hover{background:transparent;color:#17191B} .ds-btn:focus-visible{outline:2px solid #17191B;outline-offset:3px}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action beside the solid button: ink outline, fills ink with yellow text on hover.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\">Download CV <svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" aria-hidden=\"true\"><path d=\"M10 3v10M5.5 8.5 10 13l4.5-4.5M4 17h12\"/></svg></a>",
+      "css": ".ds-btn-line{font-family:Archivo,ui-sans-serif,system-ui,sans-serif;display:inline-flex;align-items:center;gap:.625rem;min-height:52px;padding:0 1.5rem;border:2px solid #17191B;border-radius:0;background:transparent;color:#17191B;font-size:.875rem;font-weight:600;letter-spacing:.02em;line-height:1;text-decoration:none;transition:background-color .2s cubic-bezier(.16,1,.3,1),color .2s cubic-bezier(.16,1,.3,1)} .ds-btn-line svg{width:18px;height:18px} .ds-btn-line:hover{background:#17191B;color:#F2C200} .ds-btn-line:focus-visible{outline:2px solid #17191B;outline-offset:3px}"
+    },
+    {
+      "name": "Proof Link",
+      "kind": "custom",
+      "refersTo": "proof-link",
+      "description": "Signature: pen-blue inline link at the end of a claim that opens the document gallery proving it.",
+      "html": "<p class=\"ds-claim\">Prepare quantity take-offs and cost estimates in Planswift. <button class=\"ds-proof\"><svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M4 1.75h5.5L12.5 5v9.25H4z\"/><path d=\"M9.5 1.75V5h3\"/></svg>Take-offs</button></p>",
+      "css": ".ds-claim{font-family:Archivo,ui-sans-serif,system-ui,sans-serif;font-size:1.0625rem;line-height:1.65;color:#3B4043;max-width:44em} .ds-proof{font:inherit;background:none;border:0;padding:0;cursor:pointer;display:inline-flex;align-items:center;gap:.3rem;margin-left:.25rem;white-space:nowrap;font-size:.875rem;font-weight:600;color:#1F4BA0;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.22em} .ds-proof svg{width:15px;height:15px;transform:translateY(-1px)} .ds-proof:hover{text-decoration-thickness:2px} .ds-proof:focus-visible{outline:2px solid #1F4BA0;outline-offset:3px}"
+    },
+    {
+      "name": "Stamp",
+      "kind": "chip",
+      "refersTo": "stamp",
+      "description": "Outlined red stamp for a certified fact (Licensed, Assessed, RFTI certified).",
+      "html": "<span class=\"ds-stamp\">Licensed</span> <span class=\"ds-stamp\">RFTI certified</span>",
+      "css": ".ds-stamp{font-family:Archivo,ui-sans-serif,system-ui,sans-serif;display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C8372D;border:1.5px solid currentColor;border-radius:0;padding:.3rem .5rem;line-height:1}"
+    },
+    {
+      "name": "Booked Entry",
+      "kind": "card",
+      "refersTo": "",
+      "description": "An entry on the line grid: date booked left of the red margin rule, title, field/value specs on the right.",
+      "html": "<article class=\"ds-entry\"><div class=\"ds-m\"><p class=\"ds-date\">Nov 2025<small>to present</small></p></div><div class=\"ds-b\"><h3 class=\"ds-h3\">Davao International Airport</h3><p class=\"ds-small\">Passenger terminal rehabilitation</p><dl class=\"ds-specs\"><div><dt>Role</dt><dd>Project Civil Engineer</dd></div><div><dt>Status</dt><dd>Active project</dd></div></dl></div></article>",
+      "css": ".ds-entry{font-family:Archivo,ui-sans-serif,system-ui,sans-serif;position:relative;display:grid;grid-template-columns:9.5rem minmax(0,1fr);column-gap:2.5rem;padding-block:2.5rem;border-top:1px solid #D3E0DA;border-bottom:1px solid #D3E0DA;background:#FBFBF8;color:#17191B;font-variant-numeric:tabular-nums lining-nums} .ds-entry::before{content:\"\";position:absolute;top:0;bottom:0;left:9.5rem;width:2px;background:#C8372D} .ds-entry::after{content:\"\";position:absolute;top:calc(2.5rem + .3em);left:calc(9.5rem - 5px);width:12px;height:12px;border-radius:50%;background:#C8372D;box-shadow:0 0 0 4px #FBFBF8} .ds-m{padding-right:1.25rem;text-align:right} .ds-date{font-size:.875rem;font-weight:600;line-height:1.45;margin:0} .ds-date small{display:block;font-weight:400;font-size:.875rem;color:#5D6468} .ds-h3{font-size:1.5rem;font-weight:700;line-height:1.18;letter-spacing:-.015em;margin:0} .ds-small{font-size:.875rem;color:#5D6468;margin:.5rem 0 0} .ds-specs{margin:1.5rem 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:2rem;border-top:1px solid #D3E0DA} .ds-specs div{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:1rem;padding:.75rem 0;border-bottom:1px solid #D3E0DA} .ds-specs dt{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#5D6468;padding-top:.15rem} .ds-specs dd{margin:0;font-size:.875rem;line-height:1.5}"
+    },
+    {
+      "name": "Cover Label",
+      "kind": "card",
+      "refersTo": "cover-label",
+      "description": "Printed white form on the yellow cover: ruled cells of field label over a bold value.",
+      "html": "<div class=\"ds-cover\"><dl class=\"ds-label\"><div><dt>Largest project</dt><dd><strong>PHP 1B+</strong> Cable Landing Station</dd></div><div><dt>Licence</dt><dd><strong>PRC Licensed</strong>, 2023</dd></div><div><dt>Based</dt><dd><strong>United Kingdom</strong></dd></div></dl></div>",
+      "css": ".ds-cover{font-family:Archivo,ui-sans-serif,system-ui,sans-serif;background:#F2C200;padding:1.5rem} .ds-label{margin:0;background:#FFFFFF;border:2px solid #17191B;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))} .ds-label div{padding:.875rem 1.25rem 1rem;border-right:1px solid #17191B} .ds-label div:last-child{border-right:0} .ds-label dt{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#5D6468} .ds-label dd{margin:.375rem 0 0;font-size:.875rem;font-weight:500;line-height:1.45;color:#17191B} .ds-label dd strong{font-size:1.0625rem;font-weight:700}"
+    },
+    {
+      "name": "Document Thumbnail",
+      "kind": "card",
+      "refersTo": "",
+      "description": "Evidence document crop on a white mat with a ruled border; title turns pen blue on hover.",
+      "html": "<button class=\"ds-doc\"><span class=\"ds-doc-img\"></span><span class=\"ds-doc-cap\"><span>Bill of Quantities</span><span>6 pages</span></span></button>",
+      "css": ".ds-doc{font-family:Archivo,ui-sans-serif,system-ui,sans-serif;display:block;width:220px;text-align:left;background:none;border:0;padding:0;cursor:pointer;color:#17191B} .ds-doc-img{display:block;aspect-ratio:4/3;background:#FFFFFF;border:1px solid #A9C0B7;transition:border-color .2s cubic-bezier(.16,1,.3,1)} .ds-doc:hover .ds-doc-img{border-color:#17191B} .ds-doc-cap{display:flex;justify-content:space-between;gap:.75rem;margin-top:.625rem;font-size:.875rem;font-weight:600;line-height:1.35} .ds-doc-cap span:last-child{font-weight:400;color:#5D6468} .ds-doc:hover .ds-doc-cap span:first-child{color:#1F4BA0;text-decoration:underline;text-underline-offset:.22em} .ds-doc:focus-visible{outline:2px solid #1F4BA0;outline-offset:3px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Fixed bar; on paper it is near-opaque with a strong-ruling underline; active section underlined in margin red.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\">Jonathan Jed Resurreccion</a><div class=\"ds-links\"><a href=\"#\">About</a><a class=\"is-active\" href=\"#\">Experience</a><a href=\"#\">Skills</a><a href=\"#\">Contact</a></div></nav>",
+      "css": ".ds-nav{font-family:Archivo,ui-sans-serif,system-ui,sans-serif;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:64px;padding:0 1.5rem;background:rgba(251,251,248,.94);box-shadow:0 1px 0 #A9C0B7;color:#17191B} .ds-brand{font-size:.875rem;font-weight:800;text-decoration:none;color:inherit} .ds-links{display:flex;gap:1.75rem} .ds-links a{font-size:.875rem;font-weight:500;text-decoration:none;color:inherit;padding:.25rem 0;border-bottom:2px solid transparent;transition:border-color .2s cubic-bezier(.16,1,.3,1)} .ds-links a:hover{border-bottom-color:currentColor} .ds-links a.is-active{border-bottom-color:#C8372D} .ds-links a:focus-visible{outline:2px solid #1F4BA0;outline-offset:3px}"
+    },
+    {
+      "name": "Contact Row",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Ruled contact row on the yellow back cover: field label, large value, arrow that nudges on hover.",
+      "html": "<div class=\"ds-back\"><a class=\"ds-way\" href=\"#\"><span class=\"ds-field\">Email</span><span class=\"ds-way-v\">name@example.com</span><svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" aria-hidden=\"true\"><path d=\"M6 14 14 6M7 6h7v7\"/></svg></a></div>",
+      "css": ".ds-back{font-family:Archivo,ui-sans-serif,system-ui,sans-serif;background:#F2C200;color:#17191B;padding:1.5rem} .ds-way{display:grid;grid-template-columns:10rem minmax(0,1fr) 20px;gap:1rem;align-items:center;padding:1.125rem 0;border-top:2px solid #17191B;border-bottom:1px solid #17191B;text-decoration:none;color:inherit} .ds-field{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#3D3500} .ds-way-v{font-size:1.25rem;font-weight:700;letter-spacing:-.01em} .ds-way svg{width:20px;height:20px;transition:transform .2s cubic-bezier(.16,1,.3,1)} .ds-way:hover .ds-way-v{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.2em} .ds-way:hover svg{transform:translate(3px,-3px)} .ds-way:focus-visible{outline:2px solid #17191B;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Surveyor's Level Book",
+    "overview": "The page is a field book. A yellow weather cover opens and closes it; between the covers are cool white pages ruled with pale green-blue lines, and one continuous red margin rule runs down the whole interior. Dates and periods are booked to the left of that rule, entries to the right. Every claim is a booked entry, and the claim that has a document behind it carries a pen-blue link that opens that exact document. The reader should feel they are checking a record, not being sold to.\n\nDensity is that of a working notebook: generous vertical rhythm between entries, tight hairline rulings inside them, specs set as two-column field/value rows. There is one typeface, Archivo, with its width axis doing the work a second face would normally do: headings are heavy and narrowed to 82%, everything else sits at normal width. Figures are tabular and lining everywhere, because the content is dates, values and quantities.\n\nThe world is flat paper and ink. Depth exists in exactly one place: the site photo tipped onto the cover with a white border, a slight rotation and a soft cast shadow. It rejects the generic SaaS portfolio: split hero with gradient, stat cards, monospace labels on cream.",
+    "keyCharacteristics": [
+      "Yellow cover / white ruled pages / yellow back cover, in that order.",
+      "One red margin rule, continuous through every interior section, with dates booked to its left.",
+      "Square corners everywhere; borders and rulings, never cards with shadows.",
+      "Pen blue is reserved for proof links; red is reserved for the margin, the current-entry dot and outlined stamps.",
+      "One typeface (Archivo variable), narrowed for headings, tabular figures throughout.",
+      "One entrance motion: the cover photo settles."
+    ],
+    "rules": [
+      {
+        "name": "The Two Covers Rule",
+        "body": "Yellow is a cover, not an accent. It fills the first and last blocks edge to edge; inside the pages it never appears as a fill, badge or highlight.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pen Means Proof Rule",
+        "body": "Pen blue marks a link to evidence. If an element is blue, clicking it opens a document or photo that backs the sentence it sits in. Navigation, contact and CV links stay ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Red Is Ruled Rule",
+        "body": "Red draws the margin and certifies facts. It is never used for text emphasis, errors, or decorative fills.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Hand Rule",
+        "body": "Archivo is the only typeface. Hierarchy comes from weight and the width axis (82% for display and headline), never from a second family or a monospace.",
+        "section": "typography"
+      },
+      {
+        "name": "The Booked Figures Rule",
+        "body": "Tabular, lining figures are set on body (`font-variant-numeric: tabular-nums lining-nums`) so dates, values and phone numbers align like a ledger.",
+        "section": "typography"
+      },
+      {
+        "name": "The Field Name Rule",
+        "body": "Uppercase tracked labels name a field in a field/value pair (a dt, or the contact type in a contact row). They are never placed above a heading as a kicker.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Print Rule",
+        "body": "Only the tipped-in cover photo casts a shadow. Cards, buttons, thumbnails and dialogs do not.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do book every dated item on the line grid with its date to the left of the red margin rule (9.5rem column at desktop).",
+      "Do keep yellow for the full-bleed opening and closing covers, and white label cards that sit on them.",
+      "Do attach a pen-blue proof link to any claim that has a document or photo behind it, at the end of that claim.",
+      "Do use outlined red stamps for certified facts (licences, assessments, certifications, roles of record).",
+      "Do set headings in Archivo at 800 and 82% width; set everything else at normal width.",
+      "Do separate rows with 1px pale rulings and sections with 1px strong rulings, rather than cards.",
+      "Do keep every corner square."
+    ],
+    "donts": [
+      "Don't introduce a second typeface or any monospace.",
+      "Don't use gradients.",
+      "Don't add shadows to anything but the tipped-in cover photo.",
+      "Don't use pen blue for navigation, contact or CV links; blue means proof.",
+      "Don't put an uppercase label above a heading as a kicker; uppercase labels only name fields.",
+      "Don't build split heroes, stat cards, or monospace labels on cream.",
+      "Don't add entrance animations beyond the cover photo settling; state transitions (hover, dialog fade) are fine."
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "title": "Choose the visual world",
+  "question": "The roll assigned the Site Board. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned", "kind": "assigned", "label": "Site Board", "kicker": "THE ROLL",
+      "lineage": "Project information boards bolted to every construction site hoarding",
+      "thesis": "His page is the board outside the site: every claim a numbered, labelled field you can read from the footpath.",
+      "palette": ["#FFD400", "#111111", "#F2F1EC", "#0057A8", "#8A8C88"],
+      "materials": ["enamelled sign panel", "steel channel frame", "plywood hoarding"],
+      "viewport": "A yellow board with a black frame fills the screen: (1) name of engineer, huge; (2) discipline; (3) ₱1B+ ICLS, licence, base; the site photo and a blue 'Contact the engineer' panel sit beside it.",
+      "risk": "Turns into a hi-vis costume if every section becomes a sign; yellow must stay on the boards, with quiet hoarding between.",
+      "raised": [
+        {"from": "challenger-orizuru", "raise": "Every field numbered (1) (2) (3) in a strict margin column, like the Program of Work he files."},
+        {"from": "challenger-glazier", "raise": "One statement per panel; hierarchy carried by panel size and colour, frame bars drawn at true thickness."},
+        {"from": "challenger-posada", "raise": "Each project board: image band across the top, facts in hard columns beneath."},
+        {"from": "challenger-vu", "raise": "Every project board shares one anatomy, so the run of boards reads like a ruler."},
+        {"from": "challenger-ikeda", "raise": "All figures set tabular."}
+      ],
+      "html": ".impeccable/decision/assigned.html"
+    },
+    {
+      "id": "model-pick", "kind": "pick", "label": "Drawing Sheet", "kicker": "IMPECCABLE’S PICK",
+      "lineage": "A1 engineering drawing sheets with border grid and title block",
+      "thesis": "The portfolio as a sheet in his drawing set: title block holds who he is, revision table holds his career.",
+      "palette": ["#FFFFFF", "#111111", "#C22222", "#9AA0A6"],
+      "materials": ["drafting film", "black linework", "red revision cloud"],
+      "viewport": "A bordered sheet with grid references; his name as the drawing title, a title block down the right with project, licence and contact, a red revision cloud circling ₱1B+.",
+      "risk": "The most familiar engineering-portfolio look, and close to what the page already is.",
+      "html": ".impeccable/decision/pick.html"
+    },
+    {
+      "id": "challenger-jp", "kind": "challenger", "catalogId": "japanese-high-density-web",
+      "label": "Evidence Index", "verdict": "competitive",
+      "lineage": "Japanese high-density web",
+      "thesis": "Every document, photo and credential visible at once in one ruled mosaic of red-tabbed modules.",
+      "palette": ["#FFFFFF", "#111111", "#D7000F", "#C8C8C8"],
+      "materials": ["hairline module grid", "red header tabs", "compact gothic sans"],
+      "viewport": "A packed grid: name module, site photo, licence, ₱1B+, BOQ, POW, take-off and plan thumbnails, contact, all in one screen.",
+      "case": "Wins on clarity (all evidence in one scan), loses on audience: UK and Australian reviewers don't read this density as engineering.",
+      "risk": "Overwhelming on a phone, the opposite of the minimalism you asked for.",
+      "html": ".impeccable/decision/challenger.html",
+      "hero": "https://impeccable.style/worlds/cards/japanese-high-density-web-hero.webp"
+    },
+    {
+      "id": "challenger-orizuru", "kind": "challenger", "catalogId": "paper-folds-pleats-deployable-orizuru-crane-sequence",
+      "label": "Orizuru Sequence", "verdict": "declined", "lineage": "origami fold diagrams",
+      "thesis": "Career shown as a fold sequence.", "palette": ["#D9381E", "#F4EDE4", "#1A1A1A", "#C9A227"],
+      "materials": ["washi", "crease lines"], "viewport": "One sheet folding step by step.",
+      "case": "Hiring engineers don't identify with paper folding; it obscures the facts.",
+      "risk": "Decorative.", "kept": "Strict numbered margin column for fields.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-orizuru-crane-sequence-hero.webp"
+    },
+    {
+      "id": "challenger-glazier", "kind": "challenger", "catalogId": "craft-making-glazier-colorfield-partition",
+      "label": "Glazier Partition", "verdict": "declined", "lineage": "steel-framed glass walls",
+      "thesis": "Sections as panes in a black glazing grid.", "palette": ["#111111", "#EEF2F2", "#1F4FBF", "#D48A1C"],
+      "materials": ["seeded glass", "black steel bars"], "viewport": "A wall elevation of panes.",
+      "case": "Elegant but reads as architecture/interiors, not civil delivery.",
+      "risk": "Too precious.", "kept": "One statement per panel; frame bars at true thickness.",
+      "hero": "https://impeccable.style/worlds/cards/craft-making-glazier-colorfield-partition-hero.webp"
+    },
+    {
+      "id": "challenger-posada", "kind": "challenger", "catalogId": "posters-covers-sleeves-posada-calavera-broadside",
+      "label": "Calavera Broadside", "verdict": "declined", "lineage": "penny-press broadsides",
+      "thesis": "Career as a shouting news sheet.", "palette": ["#EDE6D6", "#151515", "#E0402A"],
+      "materials": ["newsprint", "relief ink"], "viewport": "Headline, engraving band, two columns.",
+      "case": "Wrong register for a candidate's evidence.", "risk": "Satirical.",
+      "kept": "Image band over hard columns.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-posada-calavera-broadside-hero.webp"
+    },
+    {
+      "id": "challenger-vu", "kind": "challenger", "catalogId": "signals-instruments-vu-meter-bridge",
+      "label": "VU Meter Bridge", "verdict": "declined", "lineage": "recording desk meters",
+      "thesis": "Skills as needles on a meter bridge.", "palette": ["#F1E8D2", "#111111", "#5A3A22", "#C8301E"],
+      "materials": ["meter glass", "walnut"], "viewport": "A row of meters.",
+      "case": "Audio world, no tie to construction; meters invite fake skill levels.",
+      "risk": "Fabricated metrics.", "kept": "Identical modules repeated as a ruler.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-vu-meter-bridge-hero.webp"
+    },
+    {
+      "id": "challenger-ikeda", "kind": "challenger", "catalogId": "ikeda-datamatics",
+      "label": "Datamatics", "verdict": "declined", "lineage": "data-sublime installation art",
+      "thesis": "Black/white data field.", "palette": ["#000000", "#FFFFFF"],
+      "materials": ["barcode bars", "monospace numerals"], "viewport": "Strobing data lattice.",
+      "case": "Art-world abstraction; reviewers need plain facts.", "risk": "Unreadable.",
+      "kept": "Tabular figures throughout.",
+      "hero": "https://impeccable.style/worlds/cards/ikeda-datamatics-hero.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "canon": true,
+  "canonCard": {
+    "kind": "canon", "label": "The category standard",
+    "thesis": "A clean modern engineer's portfolio, executed impeccably.",
+    "palette": ["#FFFFFF", "#111827", "#2563EB"],
+    "materials": ["clean grid", "site photography"],
+    "viewport": "Name and roles beside a site photo, key numbers below, projects as case studies.",
+    "risk": "Indistinguishable from other portfolios by design."
+  },
+  "steer": true
+}

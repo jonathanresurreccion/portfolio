@@ -2,1130 +2,740 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jonathan Jed Resurreccion — Construction Estimator & VA Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jonathan Jed Resurreccion — Civil Engineer, Construction Estimator, Project Engineer</title>
+<meta name="description" content="Licensed Civil Engineer (PRC) with an Engineers Australia skills assessment. Project-in-Charge of a PHP 1B+ cable landing station; QA/QC, estimating and site supervision on a live airport terminal rehabilitation.">
+<meta name="theme-color" content="#F2C200">
+<meta property="og:title" content="Jonathan Jed Resurreccion — Civil Engineer">
+<meta property="og:description" content="Quantity take-offs, BOQs, cost estimates, QA/QC documentation and site supervision on aviation and telecommunications infrastructure.">
+<meta property="og:image" content="imgs/caap/caap_2.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='3' fill='%23F2C200'/%3E%3Cpath d='M10 4v24' stroke='%23C8372D' stroke-width='2'/%3E%3Cpath d='M14 11h12M14 17h12M14 23h12' stroke='%2317191B' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url("fonts/archivo-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url("fonts/archivo-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+/* ==========================================================
+   Field book: yellow weather cover, white ruled pages,
+   one red margin rule, entries booked against it.
+   ========================================================== */
 :root{
-  --navy:#1B3A6B;--navy-dark:#0F2347;--navy-deep:#091828;
-  --accent:#2E75B6;--gold:#C9A84C;--gold-light:#E8C97A;
-  --light:#EEF3FA;--lighter:#F7FAFD;--white:#FFFFFF;
-  --gray:#64748B;--gray-light:#94A3B8;--text:#1E293B;--border:#CBD5E1;
-}
-html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;background:var(--lighter);color:var(--text);line-height:1.7}
+  --cover:#F2C200;
+  --cover-ink:#17191B;
+  --cover-ink-2:#3D3500;
+  --cover-line:#17191B;
+  --paper:#FBFBF8;
+  --label:#FFFFFF;
+  --rule:#D3E0DA;
+  --rule-strong:#A9C0B7;
+  --margin:#C8372D;
+  --ink:#17191B;
+  --ink-2:#3B4043;
+  --muted:#5D6468;
+  --pen:#1F4BA0;
+  --night:#121416;
+  --night-line:#2A2E32;
+  --night-muted:#A3A9AE;
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,25,50,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:70px;transition:all 0.3s ease}
-.nav-logo{font-family:"Playfair Display",serif;color:var(--white);font-size:1.15rem;font-weight:700;letter-spacing:0.05em}
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;gap:2.5rem;list-style:none}
-.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.3s,padding 0.3s;position:relative;padding:0.5rem 0}
-.nav-links a::after{content:"";position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--gold);transition:width 0.3s ease}
-.nav-links a:hover{color:var(--gold-light)}
-.nav-links a:hover::after{width:100%}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:0.5rem}
-.hamburger span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s ease}
-.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(8px,8px)}
-.hamburger.active span:nth-child(2){opacity:0}
-.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
-.mobile-nav{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(11,25,50,0.99);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);flex-direction:column;gap:0;padding:0;max-height:calc(100vh - 70px);overflow-y:auto;animation:slideDown 0.3s ease;z-index:99}
-.mobile-nav a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.95rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;padding:1rem 2rem;border-bottom:1px solid rgba(255,255,255,0.05);transition:background 0.2s,color 0.2s}
-.mobile-nav a:hover{background:rgba(201,168,76,0.1);color:var(--gold-light)}
-.mobile-nav.active{display:flex!important}
-@keyframes slideDown{from{transform:translateY(-10px);opacity:0}to{transform:translateY(0);opacity:1}}
-@media(max-width:1024px){
-.nav-links{gap:1.8rem}
-.nav-links a{font-size:0.75rem}
-}
-@media(max-width:768px){
-nav{height:60px;padding:0 1.5rem}
-.nav-logo{font-size:1rem}
-.nav-links{display:none}
-.hamburger{display:flex}
-.mobile-nav{top:60px;max-height:calc(100vh - 60px)}
-}
+  --font:"Archivo",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --t-label:.75rem;
+  --t-sm:.875rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.125rem,1.05rem + .35vw,1.3125rem);
+  --t-h4:1.0625rem;
+  --t-h3:clamp(1.375rem,1.2rem + .75vw,1.75rem);
+  --t-h2:clamp(2.25rem,1.6rem + 2.6vw,3.5rem);
+  --t-h1:clamp(3.25rem,1.6rem + 6.6vw,6rem);
 
-.hero{min-height:100vh;background:linear-gradient(160deg,var(--navy-deep) 0%,var(--navy) 55%,#1e4d8c 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:100px 2rem 3rem}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 80% 20%,rgba(46,117,182,0.25) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 10% 80%,rgba(201,168,76,0.12) 0%,transparent 50%)}
-.hero-grid{position:absolute;inset:0;opacity:0.04;background-image:linear-gradient(rgba(255,255,255,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.5) 1px,transparent 1px);background-size:60px 60px}
-.hero-content{position:relative;z-index:1;max-width:900px;width:100%;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);border-radius:100px;padding:10px 22px;font-size:0.78rem;font-weight:600;color:var(--gold-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2rem}
-.hero-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
-.hero-name{font-family:"Playfair Display",serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:1.2rem;letter-spacing:-0.02em}
-.hero-name span{color:var(--gold)}
-.hero-title{font-size:clamp(1rem,1.9vw,1.3rem);color:rgba(255,255,255,0.7);font-weight:300;letter-spacing:0.04em;margin-bottom:3rem;line-height:1.7}
-.hero-tags{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:3.5rem}
-.hero-tag{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:10px;padding:8px 16px;font-size:0.75rem;color:rgba(255,255,255,0.85);transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);font-weight:500}
-.hero-tag:hover{background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.35);backdrop-filter:blur(8px)}
-.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.btn-primary{background:var(--gold);color:var(--navy-deep);padding:16px 40px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);display:inline-block;border:none;cursor:pointer;letter-spacing:0.05em;box-shadow:0 4px 16px rgba(201,168,76,0.25)}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-4px);box-shadow:0 12px 32px rgba(201,168,76,0.4)}
-.btn-primary:active{transform:translateY(-2px)}
-.btn-secondary{background:rgba(255,255,255,0.08);color:var(--white);padding:16px 40px;border-radius:10px;text-decoration:none;font-weight:500;font-size:0.9rem;border:1.5px solid rgba(255,255,255,0.35);transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);display:inline-block;cursor:pointer;letter-spacing:0.05em;backdrop-filter:blur(8px)}
-.btn-secondary:hover{border-color:rgba(255,255,255,0.8);background:rgba(255,255,255,0.12);transform:translateY(-4px);box-shadow:0 8px 24px rgba(46,117,182,0.2)}
-.hero-stats{display:flex;justify-content:center;margin-top:6rem;padding-top:4rem;border-top:1px solid rgba(255,255,255,0.1);gap:3rem}
-.stat{flex:1;max-width:220px;text-align:center;padding:0 1.5rem;transition:transform 0.3s ease}
-.stat:hover{transform:translateY(-2px)}
-.stat-num{font-family:"Playfair Display",serif;font-size:2.5rem;font-weight:700;color:var(--gold);display:block;line-height:1;margin-bottom:8px}
-.stat-label{font-size:0.76rem;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.08em;font-weight:600}
-
-section{padding:6rem 2rem}
-.container{max-width:1000px;margin:0 auto}
-.section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.8rem}
-.section-title{font-family:"Playfair Display",serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--navy-dark);line-height:1.25;margin-bottom:1rem}
-.section-subtitle{font-size:0.96rem;color:var(--gray);max-width:600px;margin-bottom:3.5rem;line-height:1.7}
-
-#about{background:var(--white)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-.about-text p{color:var(--gray);font-size:0.96rem;margin-bottom:1.5rem;line-height:1.8}
-.credential-list{list-style:none;margin-top:1.5rem}
-.credential-list li{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);font-size:0.86rem;transition:background 0.3s ease}
-.credential-list li:last-child{border-bottom:none}
-.credential-list li:hover{background:rgba(46,117,182,0.03)}
-.cred-icon{width:32px;height:32px;flex-shrink:0;background:linear-gradient(135deg,rgba(46,117,182,0.1) 0%,rgba(201,168,76,0.08) 100%);border:1px solid rgba(46,117,182,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-top:2px}
-.cred-icon svg{width:16px;height:16px;fill:var(--accent)}
-.cred-text strong{display:block;color:var(--navy);font-weight:600;margin-bottom:2px}
-.cred-text span{color:var(--gray-light);font-size:0.78rem}
-
-#photos{background:var(--navy-deep)}
-#photos .section-label{color:var(--gold-light)}
-#photos .section-title{color:var(--white)}
-#photos .section-subtitle{color:rgba(255,255,255,0.6)}
-.parallax-carousel-wrapper{position:relative;width:100%;margin:2.5rem 0}
-.carousel-container{position:relative;width:100%;overflow:hidden;border-radius:18px;aspect-ratio:16/9;background:#000;box-shadow:0 12px 40px rgba(0,0,0,0.3)}
-.carousel-track{display:flex;width:100%;height:100%;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1)}
-.carousel-slide{position:relative;flex:0 0 100%;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
-.carousel-slide img{width:100%;height:100%;object-fit:contain;display:block;transform:scale(1);transition:transform 0.6s cubic-bezier(0.4,0,0.2,1)}
-.carousel-slide.active img{transform:scale(1.08)}
-.slide-overlay{position:absolute;inset:0;background:linear-gradient(45deg,rgba(46,117,182,0.15) 0%,rgba(201,168,76,0.08) 100%);pointer-events:none}
-.carousel-controls{position:absolute;top:50%;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:0 20px;z-index:10;transform:translateY(-50%);pointer-events:none}
-.carousel-btn{background:rgba(255,255,255,0.18);border:1.5px solid rgba(255,255,255,0.35);color:#fff;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);font-size:0;padding:0;pointer-events:all;backdrop-filter:blur(10px);box-shadow:0 4px 16px rgba(0,0,0,0.2)}
-.carousel-btn:hover{background:rgba(255,255,255,0.28);border-color:rgba(255,255,255,0.7);transform:scale(1.12);box-shadow:0 6px 24px rgba(201,168,76,0.3)}
-.carousel-btn:active{transform:scale(0.95)}
-.carousel-btn svg{width:26px;height:26px;color:#fff;stroke-width:2}
-.carousel-caption{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem 2rem;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 40%,rgba(0,0,0,0.9) 100%);display:flex;flex-direction:column;justify-content:flex-end;animation:fadeIn 0.5s ease;z-index:8}
-.carousel-caption-tag{display:inline-block;background:rgba(201,168,76,0.95);color:var(--navy-deep);font-size:0.72rem;font-weight:700;padding:5px 13px;border-radius:5px;margin-bottom:0.9rem;letter-spacing:0.06em;text-transform:uppercase;width:fit-content}
-.carousel-caption-text{color:rgba(255,255,255,0.92);font-size:0.96rem;line-height:1.6}
-.carousel-indicators{position:absolute;bottom:5.2rem;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:9}
-.indicator{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.3);border:1.5px solid rgba(255,255,255,0.5);cursor:pointer;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1)}
-.indicator.active{background:var(--gold);border-color:var(--gold);transform:scale(1.35);box-shadow:0 0 16px rgba(201,168,76,0.9)}
-.indicator:hover{background:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.8)}
-@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-
-@media(max-width:1024px){
-.carousel-container{aspect-ratio:16/10;border-radius:16px}
-.carousel-controls{padding:0 16px}
-.carousel-btn{width:48px;height:48px}
-.carousel-btn svg{width:24px;height:24px}
-.carousel-caption{padding:2rem 1.6rem 1.6rem}
-.carousel-caption-tag{font-size:0.68rem;padding:4px 11px}
-.carousel-caption-text{font-size:0.92rem}
-.carousel-indicators{bottom:4.6rem;gap:8px}
-.indicator{width:10px;height:10px}
+  --max:1180px;
+  --gutter:clamp(1.25rem,4vw,3rem);
+  --m:9.5rem;
+  --gap:2.5rem;
+  --row:clamp(2.25rem,3.5vw,3rem);
+  --sec:clamp(4.5rem,3rem + 5vw,7.5rem);
+  --nav:64px;
+  --ease:cubic-bezier(.16,1,.3,1);
 }
 
-@media(max-width:768px){
-.carousel-container{aspect-ratio:16/10;border-radius:14px}
-.carousel-controls{padding:0 12px}
-.carousel-btn{width:44px;height:44px}
-.carousel-btn svg{width:22px;height:22px}
-.carousel-caption{padding:1.8rem 1.4rem 1.4rem}
-.carousel-caption-tag{font-size:0.65rem;padding:3px 10px}
-.carousel-caption-text{font-size:0.88rem;line-height:1.5}
-.carousel-indicators{bottom:4.2rem;gap:7px}
-.indicator{width:9px;height:9px}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav) + 12px);-webkit-text-size-adjust:100%;scrollbar-color:var(--rule-strong) var(--paper)}
+body{font-family:var(--font);font-size:var(--t-body);line-height:1.6;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums lining-nums}
+img{display:block;max-width:100%;height:auto}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+a{color:inherit}
+ul{list-style:none;padding:0}
+strong{font-weight:600;color:var(--ink)}
+::selection{background:var(--cover);color:var(--ink)}
+:focus-visible{outline:2px solid var(--pen);outline-offset:3px}
+.cover :focus-visible,.back :focus-visible{outline-color:var(--ink)}
+.skip{position:absolute;left:1rem;top:-80px;z-index:300;background:var(--ink);color:#fff;padding:.75rem 1rem;font-size:var(--t-sm);text-decoration:none}
+.skip:focus{top:1rem}
+
+.wrap{max-width:calc(var(--max) + var(--gutter) * 2);margin-inline:auto;padding-inline:var(--gutter)}
+
+/* ---------- type roles ---------- */
+.h1{font-size:var(--t-h1);font-weight:800;line-height:.9;letter-spacing:-.03em;font-stretch:82%}
+.h2{font-size:var(--t-h2);font-weight:800;line-height:1;letter-spacing:-.025em;font-stretch:82%;text-wrap:balance}
+.h3{font-size:var(--t-h3);font-weight:700;line-height:1.18;letter-spacing:-.015em;text-wrap:balance}
+.h4{font-size:var(--t-h4);font-weight:600;line-height:1.35}
+.lead{font-size:var(--t-lead);line-height:1.5;color:var(--ink-2);max-width:38em}
+.body{font-size:var(--t-body);line-height:1.65;color:var(--ink-2);max-width:40em}
+.small{font-size:var(--t-sm);line-height:1.55;color:var(--muted)}
+.field{font-size:var(--t-label);font-weight:600;line-height:1.3;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- actions ---------- */
+.btn{display:inline-flex;align-items:center;gap:.625rem;min-height:52px;padding:0 1.5rem;border:2px solid var(--ink);font-size:var(--t-sm);font-weight:600;letter-spacing:.02em;text-decoration:none;line-height:1;transition:background-color .2s var(--ease),color .2s var(--ease)}
+.btn svg{width:18px;height:18px;flex-shrink:0}
+.btn-solid{background:var(--ink);color:var(--cover)}
+.btn-solid:hover{background:transparent;color:var(--ink)}
+.btn-line{color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--cover)}
+.pen{color:var(--pen);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.22em}
+.pen:hover{text-decoration-thickness:2px}
+
+/* ==========================================================
+   Nav
+   ========================================================== */
+.nav{position:fixed;inset:0 0 auto;z-index:100;height:var(--nav);transition:background-color .25s var(--ease),box-shadow .25s var(--ease)}
+.nav.on-paper{background:rgba(251,251,248,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--rule-strong)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:100%}
+.brand{font-size:var(--t-sm);font-weight:800;letter-spacing:.01em;text-decoration:none;display:flex;align-items:baseline;gap:.5rem;white-space:nowrap}
+.links{display:flex;gap:1.75rem}
+.links a{font-size:var(--t-sm);font-weight:500;text-decoration:none;padding:.25rem 0;border-bottom:2px solid transparent;transition:border-color .2s var(--ease)}
+.links a:hover{border-bottom-color:currentColor}
+.links a.is-active{border-bottom-color:var(--margin)}
+.nav-end{display:flex;gap:.75rem;align-items:center}
+.nav-cv{min-height:40px;padding:0 1rem}
+.menu-btn{display:none;width:44px;height:44px;border:2px solid var(--ink);place-items:center}
+.menu-btn i{display:block;width:18px;height:2px;background:var(--ink);transition:transform .25s var(--ease),opacity .2s}
+.menu-btn i+i{margin-top:4px}
+.menu-btn[aria-expanded="true"] i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] i:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.menu{position:fixed;inset:var(--nav) 0 auto;z-index:99;background:var(--paper);box-shadow:0 1px 0 var(--rule-strong);padding:.25rem var(--gutter) 1.5rem;display:none}
+.menu.is-open{display:block}
+.menu a:not(.btn){display:block;padding:1rem 0;border-bottom:1px solid var(--rule);font-size:var(--t-lead);font-weight:600;text-decoration:none}
+.menu .btn{margin-top:1.25rem;width:100%;justify-content:center}
+
+/* ==========================================================
+   Cover (yellow)
+   ========================================================== */
+.cover{background:var(--cover);color:var(--cover-ink);padding:calc(var(--nav) + clamp(1.5rem,3.5vw,2.75rem)) 0 clamp(2.5rem,4vw,3.5rem)}
+.cover-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.roles{margin-top:1.5rem;font-size:var(--t-lead);font-weight:600;line-height:1.4;letter-spacing:-.005em}
+.roles span{white-space:nowrap}
+.roles b{font-weight:400;color:var(--cover-ink-2)}
+.cover .lead{margin-top:1.5rem;color:var(--cover-ink-2)}
+.cover .lead strong{color:var(--cover-ink)}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.tip{position:relative;justify-self:end;width:min(100%,360px)}
+.tip img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:30% 70%;border:10px solid #fff;transform:rotate(1.25deg);box-shadow:0 22px 40px -18px rgba(40,30,0,.55),0 2px 6px rgba(40,30,0,.2);animation:tipIn 1.1s var(--ease) .15s both}
+/* the page's one motion: the photo is laid onto the cover and settles */
+@keyframes tipIn{from{transform:translate(18px,-10px) rotate(4deg);box-shadow:0 40px 60px -20px rgba(40,30,0,.45),0 2px 6px rgba(40,30,0,.15)}}
+.tip figcaption{margin-top:.75rem;font-size:var(--t-sm);font-weight:500;color:var(--cover-ink-2);text-align:right}
+
+/* the cover label: a printed form */
+.label{margin-top:clamp(2rem,3.5vw,2.75rem);background:var(--label);border:2px solid var(--cover-line);display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.label div{padding:.875rem 1.25rem 1rem;border-right:1px solid var(--cover-line);border-bottom:1px solid var(--cover-line)}
+.label div:nth-child(3n){border-right:0}
+.label div:nth-last-child(-n+3){border-bottom:0}
+.label dd{margin-top:.375rem;font-size:var(--t-sm);font-weight:500;line-height:1.45;color:var(--ink)}
+.label dd strong{font-size:var(--t-body);font-weight:700}
+
+/* ==========================================================
+   Pages (white, ruled, red margin)
+   ========================================================== */
+.pages{position:relative}
+.pages::before{content:"";position:absolute;top:0;bottom:0;z-index:0;width:2px;background:var(--margin);left:calc(max(var(--gutter),(100% - var(--max)) / 2) + var(--m))}
+.page{position:relative;padding-block:var(--sec)}
+.page+.page{border-top:1px solid var(--rule-strong)}
+
+.line{display:grid;grid-template-columns:var(--m) minmax(0,1fr);column-gap:var(--gap)}
+.line>.m{padding-right:1.25rem;text-align:right}
+.line>.m,.line>.b{min-width:0}
+.date{font-size:var(--t-sm);font-weight:600;line-height:1.45;color:var(--ink)}
+.date small{display:block;font-size:var(--t-sm);font-weight:400;color:var(--muted)}
+
+.head{margin-bottom:clamp(2.5rem,4vw,3.5rem)}
+.head .lead{margin-top:1.25rem}
+
+.entry{position:relative;padding-block:var(--row);border-top:1px solid var(--rule)}
+.entry:last-child{border-bottom:1px solid var(--rule)}
+.entry .h3+.small{margin-top:.5rem}
+.now .m::after{content:"";position:absolute;top:calc(var(--row) + .3em);left:calc(var(--m) - 5px);width:12px;height:12px;border-radius:50%;background:var(--margin);box-shadow:0 0 0 4px var(--paper)}
+
+.specs{margin-top:1.5rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:2rem;border-top:1px solid var(--rule)}
+.specs div{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--rule)}
+.specs dt{padding-top:.15rem}
+.specs dd{font-size:var(--t-sm);line-height:1.5;color:var(--ink)}
+
+.bul{margin-top:2rem;max-width:44em}
+.bul li{position:relative;padding-left:1.5rem;color:var(--ink-2);line-height:1.65}
+.bul li+li{margin-top:.75rem}
+.bul li::before{content:"";position:absolute;left:0;top:.8em;width:.625rem;height:2px;background:var(--rule-strong)}
+.proof{display:inline-flex;align-items:center;gap:.3rem;margin-left:.25rem;white-space:nowrap;font-size:var(--t-sm)}
+.proof svg{width:15px;height:15px;flex-shrink:0;transform:translateY(-1px)}
+
+
+.block{margin-top:clamp(2rem,3.5vw,2.75rem)}
+.bh{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:.875rem;font-size:var(--t-body);font-weight:600;line-height:1.35;color:var(--ink)}
+.bh span{font-size:var(--t-sm);font-weight:400;color:var(--muted)}
+
+.photos{display:flex;gap:.5rem}
+.photo{position:relative;flex:var(--r) 1 0%;min-width:0;aspect-ratio:var(--r);overflow:hidden;background:var(--rule)}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.photo:hover img{transform:scale(1.04)}
+
+.docs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.docs.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.doc{display:block;text-align:left}
+.doc-img{display:block;aspect-ratio:4/3;overflow:hidden;background:#fff;border:1px solid var(--rule-strong);transition:border-color .2s var(--ease)}
+.doc-img img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .6s var(--ease)}
+.doc:hover .doc-img{border-color:var(--ink)}
+.doc:hover .doc-img img{transform:scale(1.03)}
+.doc-cap{display:flex;justify-content:space-between;align-items:baseline;gap:.75rem;margin-top:.625rem;font-size:var(--t-sm);font-weight:600;line-height:1.35}
+.doc-cap span:last-child{font-weight:400;color:var(--muted);white-space:nowrap}
+.doc:hover .doc-cap span:first-child{color:var(--pen);text-decoration:underline;text-underline-offset:.22em}
+
+.facts{margin-top:2.5rem;border-top:1px solid var(--rule)}
+.facts div{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:1.5rem;padding:.875rem 0;border-bottom:1px solid var(--rule)}
+.facts dt{padding-top:.2rem}
+.facts dd{color:var(--ink)}
+.copy>*+*{margin-top:1.125rem}
+
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:3rem;border-top:1px solid var(--rule)}
+.skill{padding:1.375rem 0;border-bottom:1px solid var(--rule)}
+.skill .small{margin-top:.375rem;max-width:34em}
+.tools{margin-top:1.75rem;display:grid;grid-template-columns:9rem minmax(0,1fr);gap:1.5rem}
+.tools dt{padding-top:.2rem}
+.tools dd{color:var(--ink)}
+
+.cred{padding-block:1.125rem;border-top:1px solid var(--rule)}
+.cred.last{border-bottom:1px solid var(--rule)}
+.cred .b{display:flex;justify-content:space-between;gap:1.5rem;align-items:baseline}
+.cred-name{font-weight:600;line-height:1.4}
+.cred .small{margin-top:.125rem}
+.stamp{flex-shrink:0;font-size:var(--t-label);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--margin);border:1.5px solid currentColor;padding:.3rem .5rem;line-height:1}
+.sub{margin-top:3rem;margin-bottom:1rem}
+.stamps{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.note{margin-top:1.5rem}
+
+/* ==========================================================
+   Back cover (yellow): contact
+   ========================================================== */
+.back{background:var(--cover);color:var(--cover-ink);padding-top:var(--sec)}
+.back-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(2.5rem,6vw,5rem);align-items:start}
+.back .lead{margin-top:1.25rem;color:var(--cover-ink-2)}
+.back .field{color:var(--cover-ink-2)}
+.ways{margin-top:2.5rem;border-top:2px solid var(--cover-line)}
+.ways li{border-bottom:1px solid var(--cover-line)}
+.way{display:grid;grid-template-columns:12.5rem minmax(0,1fr) 20px;gap:1rem;align-items:center;padding:1.125rem 0;text-decoration:none}
+.way-v{font-size:var(--t-lead);font-weight:700;letter-spacing:-.01em;line-height:1.3;overflow-wrap:anywhere}
+.way svg{width:20px;height:20px;transition:transform .2s var(--ease)}
+a.way:hover .way-v{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.2em}
+a.way:hover svg{transform:translate(3px,-3px)}
+.back .actions{margin-top:2rem}
+.avail{background:var(--label);border:2px solid var(--cover-line);padding:clamp(1.5rem,3vw,2rem)}
+.avail .field{color:var(--muted)}
+.avail-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.avail .body{margin-top:.75rem}
+.avail-part{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--rule)}
+.avail-part .bh{margin-bottom:.375rem}
+.avail-part .small{color:var(--ink)}
+.foot{margin-top:var(--sec);border-top:2px solid var(--cover-line);padding-block:1.25rem 2rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem 2rem;font-size:var(--t-sm);font-weight:500}
+.foot a{text-underline-offset:.2em}
+
+/* ==========================================================
+   Lightbox
+   ========================================================== */
+.lb{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:var(--night);color:#fff;overflow:hidden}
+.lb[open]{display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;animation:lbIn .25s var(--ease)}
+@keyframes lbIn{from{opacity:0}to{opacity:1}}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.875rem var(--gutter);border-bottom:1px solid var(--night-line)}
+.lb-count{font-size:var(--t-label);font-weight:600;letter-spacing:.08em;color:var(--night-muted)}
+.lb-title{font-size:var(--t-sm);font-weight:600;margin-top:.125rem}
+.lb-btn{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--night-line);color:#fff;background:rgba(18,20,22,.75);flex-shrink:0;transition:border-color .2s var(--ease),background-color .2s var(--ease),color .2s var(--ease)}
+.lb-btn:hover{border-color:var(--cover);background:var(--cover);color:var(--ink)}
+.lb-btn svg{width:20px;height:20px}
+.lb :focus-visible{outline-color:var(--cover)}
+.lb-stage{--pt:1.5rem;--pb:1.5rem;--px:calc(var(--gutter) + 60px);position:relative;min-height:0}
+.lb-stage img{position:absolute;top:var(--pt);left:var(--px);width:calc(100% - var(--px) * 2);height:calc(100% - var(--pt) - var(--pb));object-fit:contain;opacity:0;transition:opacity .3s var(--ease)}
+.lb-stage img.is-loaded{opacity:1}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%)}
+.lb-prev{left:var(--gutter)}
+.lb-next{right:var(--gutter)}
+.lb-cap{padding:0 var(--gutter) 1rem;text-align:center;font-size:var(--t-sm);line-height:1.55;color:var(--night-muted);min-height:1.55em}
+.lb-thumbs{display:flex;gap:.5rem;overflow-x:auto;padding:.75rem var(--gutter) 1rem;border-top:1px solid var(--night-line);scrollbar-width:thin;scrollbar-color:var(--night-line) transparent}
+.lb-thumbs button{flex:0 0 auto;width:72px;height:52px;overflow:hidden;border:2px solid transparent;opacity:.5;transition:opacity .2s var(--ease)}
+.lb-thumbs button:hover{opacity:.85}
+.lb-thumbs button[aria-current="true"]{opacity:1;border-color:var(--cover)}
+.lb-thumbs img{width:100%;height:100%;object-fit:cover;object-position:top}
+body.lb-open{overflow:hidden}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+@media (max-width:1100px){
+  :root{--m:8rem;--gap:2rem}
+  .docs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .links{gap:1.25rem}
 }
-
-@media(max-width:640px){
-.carousel-container{aspect-ratio:1/0.8;border-radius:12px}
-.carousel-controls{padding:0 10px}
-.carousel-btn{width:40px;height:40px}
-.carousel-btn svg{width:20px;height:20px}
-.carousel-caption{padding:1.5rem 1.2rem 1.2rem}
-.carousel-caption-tag{font-size:0.6rem;padding:2px 8px}
-.carousel-caption-text{font-size:0.8rem;line-height:1.4}
-.carousel-indicators{bottom:3.8rem;gap:6px}
-.indicator{width:8px;height:8px;border-width:1px}
+@media (max-width:980px){
+  .links,.nav-cv{display:none}
+  .menu-btn{display:grid}
+  .cover-grid{grid-template-columns:1fr}
+  .tip{justify-self:start;width:min(100%,520px)}
+  .tip img{aspect-ratio:4/3}
+  .tip figcaption{text-align:left}
+  .label{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .label div:nth-child(3n){border-right:1px solid var(--cover-line)}
+  .label div:nth-child(2n){border-right:0}
+  .label div:nth-last-child(-n+3){border-bottom:1px solid var(--cover-line)}
+  .label div:nth-last-child(-n+2){border-bottom:0}
+  .specs{grid-template-columns:1fr}
+  .back-grid{grid-template-columns:1fr}
 }
-
-@media(max-width:480px){
-.carousel-container{aspect-ratio:1/1;border-radius:10px}
-.carousel-controls{padding:0 8px}
-.carousel-btn{width:36px;height:36px}
-.carousel-btn svg{width:18px;height:18px}
-.carousel-caption{padding:1.2rem 1rem 1rem}
-.carousel-caption-tag{font-size:0.58rem;padding:2px 7px}
-.carousel-caption-text{font-size:0.75rem;line-height:1.3}
-.carousel-indicators{bottom:3.2rem;gap:5px}
-.indicator{width:7px;height:7px;border-width:1px}
+@media (max-width:760px){
+  :root{--m:0px;--gap:1.25rem}
+  .pages::before{left:calc(var(--gutter) - 2px)}
+  .line{grid-template-columns:minmax(0,1fr);padding-left:var(--gap)}
+  .line>.m{text-align:left;padding:0 0 .625rem}
+  .line>.m:empty{display:none}
+  .date small{display:inline;margin-left:.25rem}
+  .now .m::after{top:calc(var(--row) + .2em);left:-7px}
+  .cred .m{padding-bottom:.25rem}
+  .skills{grid-template-columns:1fr}
+  .facts div,.tools{grid-template-columns:1fr;gap:.25rem}
+  .way{grid-template-columns:minmax(0,1fr) 20px;row-gap:.25rem}
+  .way .field{grid-column:1/-1}
 }
-
-#skills{background:var(--lighter)}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
-.skill-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.8rem 1.4rem;text-align:center;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 2px 8px rgba(27,58,107,0.06)}
-.skill-card:hover{border-color:var(--accent);box-shadow:0 12px 32px rgba(46,117,182,0.15);transform:translateY(-6px)}
-.skill-icon{width:48px;height:48px;background:linear-gradient(135deg,var(--light) 0%,rgba(46,117,182,0.08) 100%);border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;transition:all 0.3s ease}
-.skill-card:hover .skill-icon{background:linear-gradient(135deg,var(--accent) 0%,rgba(46,117,182,0.6) 100%);border-color:var(--accent)}
-.skill-icon svg{width:24px;height:24px;fill:var(--accent);transition:fill 0.3s ease}
-.skill-card:hover .skill-icon svg{fill:var(--white)}
-.skill-name{font-size:0.85rem;font-weight:700;color:var(--navy);margin-bottom:6px;letter-spacing:0.02em}
-.skill-desc{font-size:0.74rem;color:var(--gray-light);line-height:1.6}
-
-#projects{background:var(--white)}
-.project-card{background:var(--white);border:1px solid var(--border);border-radius:18px;overflow:hidden;margin-bottom:2.5rem;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 2px 12px rgba(27,58,107,0.08)}
-.project-card:hover{box-shadow:0 16px 48px rgba(27,58,107,0.16);transform:translateY(-4px)}
-.project-header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);padding:2.8rem;position:relative;overflow:hidden}
-.project-header.converge-header{background:linear-gradient(135deg,#0a3d62 0%,#1a5276 100%)}
-.project-type{display:inline-block;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.35);color:var(--gold-light);font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:1rem}
-.project-name{font-family:"Playfair Display",serif;font-size:1.5rem;color:var(--white);font-weight:700;margin-bottom:0.5rem;line-height:1.3}
-.project-org{font-size:0.84rem;color:rgba(255,255,255,0.65)}
-.project-body{padding:2.8rem}
-.project-meta{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:2.2rem;padding-bottom:1.8rem;border-bottom:1px solid var(--border)}
-.meta-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-light);font-weight:700;margin-bottom:4px}
-.meta-value{font-size:0.88rem;font-weight:600;color:var(--navy)}
-.deliverable-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:2.5rem}
-.deliverable-list li{display:flex;align-items:flex-start;gap:12px;font-size:0.88rem;color:var(--gray);line-height:1.6}
-.deliverable-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:6px;flex-shrink:0}
-
-.doc-previews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:2rem}
-.doc-thumb{border-radius:10px;overflow:hidden;border:1px solid var(--border)}
-.doc-thumb img{width:100%;display:block;transition:transform 0.3s}
-.doc-thumb:hover img{transform:scale(1.03)}
-.doc-caption{padding:10px 14px;background:var(--lighter);font-size:0.72rem;color:var(--gray);font-weight:500;text-align:center}
-
-/* Gallery Modal Carousel */
-.gallery-thumb{cursor:pointer;position:relative;overflow:hidden;border-radius:14px 14px 0 0;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f5f5f5 0%,#efefef 100%);height:200px;flex:1}
-.gallery-thumb img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);display:block}
-.gallery-thumb:hover img{transform:scale(1.08)}
-.gallery-item-wrapper{display:flex;flex-direction:column;cursor:pointer;border-radius:14px;overflow:hidden;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 4px 16px rgba(27,58,107,0.08)}
-.gallery-item-wrapper:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(27,58,107,0.18),0 0 0 1px rgba(201,168,76,0.3)}
-.gallery-thumb::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(201,168,76,0.25) 0%,rgba(0,0,0,0.2) 100%);pointer-events:none;opacity:0;transition:opacity 0.3s ease}
-.gallery-thumb:hover::after{opacity:1}
-.gallery-thumb .magnifier{position:absolute;width:44px;height:44px;background:rgba(255,255,255,0.95);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;opacity:0;transition:all 0.3s ease;transform:scale(0.75);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
-.gallery-thumb:hover .magnifier{opacity:1;transform:scale(1)}
-.gallery-thumb .magnifier svg{width:22px;height:22px;color:var(--navy-deep);stroke-width:2}
-.gallery-caption{padding:12px 14px;background:linear-gradient(135deg,#f8f9fb 0%,#f0f4f8 100%);font-size:0.73rem;color:var(--navy-dark);font-weight:600;text-align:center;border-top:1px solid rgba(201,168,76,0.15);flex-shrink:0;letter-spacing:0.04em}
-
-/* Modal */
-.gallery-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:1000;animation:fadeIn 0.3s ease;backdrop-filter:blur(8px)}
-.gallery-modal.active{display:flex;align-items:center;justify-content:center;padding:16px}
-.modal-content{position:relative;width:90vw;max-width:1100px;height:auto;max-height:92vh;background:linear-gradient(135deg,rgba(15,35,71,0.5) 0%,rgba(27,58,107,0.4) 100%);border:1px solid rgba(201,168,76,0.25);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;animation:slideUp 0.5s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 20px 60px rgba(0,0,0,0.4),inset 0 1px 0 rgba(255,255,255,0.1)}
-.modal-track-wrapper{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center;border-radius:16px 16px 0 0}
-.modal-track{display:flex;width:100%;height:100%;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1)}
-.modal-slide{flex:0 0 100%;width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative;background:#000}
-.modal-slide img{width:100%;height:100%;object-fit:contain;display:block;animation:parallaxZoom 0.7s cubic-bezier(0.34,1.56,0.64,1)}
-.modal-slide.active img{animation:parallaxZoom 0.7s cubic-bezier(0.34,1.56,0.64,1)}
-@keyframes parallaxZoom{from{transform:scale(0.92);opacity:0}to{transform:scale(1);opacity:1}}
-.modal-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(46,117,182,0.15) 0%,rgba(201,168,76,0.08) 100%);pointer-events:none}
-
-.modal-controls{position:absolute;top:50%;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:0 20px;z-index:10;transform:translateY(-50%);pointer-events:none}
-.modal-btn{background:rgba(255,255,255,0.18);border:1.5px solid rgba(255,255,255,0.35);color:#fff;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);font-size:0;padding:0;pointer-events:all;backdrop-filter:blur(12px);box-shadow:0 4px 16px rgba(0,0,0,0.2)}
-.modal-btn:hover{background:rgba(255,255,255,0.28);border-color:rgba(255,255,255,0.7);transform:scale(1.12);box-shadow:0 6px 24px rgba(201,168,76,0.3)}
-.modal-btn:active{transform:scale(0.95)}
-.modal-btn svg{width:26px;height:26px;color:#fff;stroke-width:2}
-
-.modal-indicators{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:9}
-.modal-indicator{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.25);border:1.5px solid rgba(255,255,255,0.45);cursor:pointer;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1)}
-.modal-indicator.active{background:var(--gold);border-color:var(--gold);transform:scale(1.35);box-shadow:0 0 16px rgba(201,168,76,0.9)}
-.modal-indicator:hover{background:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.8)}
-
-.modal-info{background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 40%,rgba(0,0,0,0.9) 100%);padding:2.2rem 1.8rem 1.8rem;flex-shrink:0;min-height:auto}
-.modal-counter{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
-.modal-slide-count{color:rgba(255,255,255,0.65);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500}
-.modal-close{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;padding:0;border-radius:8px;backdrop-filter:blur(8px)}
-.modal-close:hover{background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.4);color:var(--gold-light);transform:rotate(90deg)}
-.modal-close svg{width:20px;height:20px;stroke-width:2.5}
-.modal-title{color:rgba(255,255,255,0.95);font-size:clamp(0.88rem,2vw,1rem);line-height:1.6;word-break:break-word}
-
-.modal-header-bar{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.8rem;border-bottom:1px solid rgba(255,255,255,0.12);background:linear-gradient(135deg,rgba(0,0,0,0.3) 0%,rgba(15,35,71,0.2) 100%);backdrop-filter:blur(8px)}
-.modal-project-name{color:var(--gold-light);font-size:0.76rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase}
-
-@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-
-@media(max-width:1024px){
-.doc-previews{grid-template-columns:repeat(2,1fr);gap:14px}
-.gallery-thumb{height:180px}
+@media (max-width:560px){
+  .label{grid-template-columns:1fr}
+  .label div,.label div:nth-child(3n){border-right:0}
+  .label div:nth-last-child(-n+3),.label div:nth-last-child(-n+2){border-bottom:1px solid var(--cover-line)}
+  .label div:last-child{border-bottom:0}
+  .actions .btn{flex:1 1 100%;justify-content:center}
+  .specs div{grid-template-columns:1fr;gap:.125rem}
+  .photos{flex-wrap:wrap}
+  .photo:first-child{flex-basis:100%}
+  .photo:not(:first-child){flex:1 1 0%}
+  .cred .b{flex-direction:column;gap:.5rem}
+  .docs.two{grid-template-columns:1fr}
+  .lb-stage{--pt:1rem;--pb:4.5rem;--px:var(--gutter)}
+  .lb-prev,.lb-next{top:auto;bottom:1rem;transform:none}
 }
-
-@media(max-width:768px){
-.doc-previews{grid-template-columns:1fr;gap:12px}
-.gallery-thumb{height:160px}
-.gallery-item-wrapper:hover{transform:translateY(-4px)}
-.modal-content{width:96vw;max-width:100%;max-height:90vh;border-radius:18px}
-.modal-track-wrapper{aspect-ratio:4/3;border-radius:14px 14px 0 0}
-.modal-controls{padding:0 12px}
-.modal-btn{width:48px;height:48px}
-.modal-btn svg{width:24px;height:24px}
-.modal-info{padding:1.8rem 1.4rem 1.4rem}
-.modal-title{font-size:0.88rem}
-.modal-header-bar{padding:1rem 1.4rem}
-.modal-project-name{font-size:0.74rem}
-.modal-indicators{bottom:14px;gap:8px}
-.modal-indicator{width:10px;height:10px;border-width:1.5px}
-.modal-counter{margin-bottom:0.8rem}
-.modal-slide-count{font-size:0.75rem}
-}
-
-@media(max-width:640px){
-.doc-previews{grid-template-columns:1fr}
-.gallery-thumb{height:140px}
-.gallery-caption{padding:10px 12px;font-size:0.68rem}
-.modal-content{width:100%;border-radius:16px}
-.modal-track-wrapper{aspect-ratio:1/0.9;border-radius:12px 12px 0 0}
-.modal-controls{padding:0 8px}
-.modal-btn{width:42px;height:42px}
-.modal-btn svg{width:20px;height:20px}
-.modal-info{padding:1.5rem 1.2rem 1.2rem}
-.modal-title{font-size:0.8rem;line-height:1.4}
-.modal-header-bar{padding:0.9rem 1.2rem}
-.modal-project-name{font-size:0.7rem;letter-spacing:0.08em}
-.modal-indicators{bottom:12px;gap:6px}
-.modal-indicator{width:9px;height:9px;border-width:1px}
-.modal-counter{margin-bottom:0.6rem}
-.modal-slide-count{font-size:0.7rem}
-.modal-close{width:32px;height:32px}
-.modal-close svg{width:18px;height:18px}
-}
-
-@media(max-width:480px){
-.gallery-thumb{height:120px}
-.gallery-caption{padding:8px 10px;font-size:0.65rem}
-.gallery-item-wrapper{border-radius:10px}
-.gallery-thumb{border-radius:10px 10px 0 0}
-.modal-content{width:100%;max-height:88vh;border-radius:14px}
-.modal-track-wrapper{aspect-ratio:1/1;border-radius:10px 10px 0 0}
-.modal-controls{padding:0 6px}
-.modal-btn{width:38px;height:38px}
-.modal-btn svg{width:18px;height:18px}
-.modal-info{padding:1.2rem 1rem 1rem;margin-bottom:0}
-.modal-title{font-size:0.75rem}
-.modal-header-bar{padding:0.8rem 1rem}
-.modal-project-name{font-size:0.68rem}
-.modal-indicators{bottom:10px;gap:5px}
-.modal-indicator{width:8px;height:8px;border-width:1px}
-.modal-close{width:30px;height:30px}
-.modal-close svg{width:16px;height:16px}
-}
-
-#converge-project{background:var(--lighter)}
-
-.rfti-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(39,174,96,0.12);border:1px solid rgba(39,174,96,0.35);color:#27ae60;font-size:0.76rem;font-weight:700;padding:6px 16px;border-radius:100px;letter-spacing:0.08em;margin-bottom:1.5rem;text-transform:uppercase}
-.rfti-badge::before{content:"✓";font-weight:900}
-
-.rfti-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:2rem}
-.rfti-item{border-radius:12px;overflow:hidden;border:1px solid var(--border);background:var(--white);transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 2px 8px rgba(27,58,107,0.06)}
-.rfti-item:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(27,58,107,0.12);border-color:var(--accent)}
-.rfti-item img{width:100%;height:160px;object-fit:cover;display:block;transition:transform 0.4s ease}
-.rfti-item:hover img{transform:scale(1.05)}
-.rfti-label{padding:10px 14px;font-size:0.73rem;color:var(--gray);font-weight:600;text-align:center;background:linear-gradient(135deg,#f8f9fb 0%,#f0f4f8 100%);letter-spacing:0.02em}
-
-#contact{background:linear-gradient(160deg,var(--navy-deep) 0%,var(--navy) 100%);position:relative;overflow:hidden}
-#contact::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 90% 50%,rgba(46,117,182,0.35) 0%,transparent 60%)}
-#contact .section-label{color:var(--gold-light)}
-#contact .section-title{color:var(--white)}
-#contact .section-subtitle{color:rgba(255,255,255,0.6)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;position:relative;z-index:1}
-.contact-item{display:flex;align-items:flex-start;gap:16px;padding:1.4rem 1.6rem;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;margin-bottom:14px;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);backdrop-filter:blur(8px)}
-.contact-item:hover{background:rgba(255,255,255,0.12);border-color:rgba(201,168,76,0.3);transform:translateX(4px)}
-.contact-item-icon{width:40px;height:40px;flex-shrink:0;background:linear-gradient(135deg,rgba(201,168,76,0.2) 0%,rgba(46,117,182,0.1) 100%);border:1px solid rgba(201,168,76,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease}
-.contact-item:hover .contact-item-icon{background:linear-gradient(135deg,rgba(201,168,76,0.3) 0%,rgba(46,117,182,0.15) 100%)}
-.contact-item-icon svg{width:18px;height:18px;fill:var(--gold-light)}
-.contact-item-text strong{display:block;font-size:0.76rem;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.55);margin-bottom:4px;font-weight:700}
-.contact-item-text a,.contact-item-text span{font-size:0.9rem;color:var(--white);text-decoration:none;font-weight:500}
-.contact-item-text a:hover{color:var(--gold-light);transition:color 0.3s ease}
-.availability-card{background:linear-gradient(135deg,rgba(201,168,76,0.12) 0%,rgba(201,168,76,0.06) 100%);border:1px solid rgba(201,168,76,0.28);border-radius:16px;padding:2.4rem;margin-top:1.5rem;backdrop-filter:blur(8px);transition:all 0.35s ease}
-.availability-card:hover{border-color:rgba(201,168,76,0.45);background:rgba(201,168,76,0.15)}
-.availability-card h3{font-family:"Playfair Display",serif;color:var(--gold-light);font-size:1.15rem;margin-bottom:1.2rem;font-weight:700}
-.availability-card p{font-size:0.85rem;color:rgba(255,255,255,0.75);line-height:1.8;margin-bottom:1rem}
-.avail-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(39,174,96,0.18);border:1px solid rgba(39,174,96,0.4);color:#6EE7B7;font-size:0.76rem;font-weight:700;padding:6px 14px;border-radius:100px;letter-spacing:0.06em;margin-bottom:1.2rem}
-.avail-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:#6EE7B7;animation:pulse 2s infinite}
-
-footer{background:var(--navy-deep);text-align:center;padding:2rem 1.5rem;font-size:0.78rem;color:rgba(255,255,255,0.4);border-top:1px solid rgba(255,255,255,0.08)}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-
-
-#ai-automation-project{background:var(--white)}
-@media(max-width:1200px){
-section{padding:5rem 1.5rem}
-.container{max-width:900px}
-.about-grid,.contact-grid{gap:4rem}
-}
-
-@media(max-width:1024px){
-section{padding:4.5rem 1.5rem}
-.about-grid,.contact-grid{gap:3rem}
-.project-body{padding:2.2rem}
-.project-header{padding:2.4rem}
-.doc-previews{grid-template-columns:repeat(2,1fr)}
-}
-
-@media(max-width:768px){
-section{padding:3.5rem 1.5rem}
-.container{max-width:100%;padding:0 1.5rem}
-.about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem}
-.section-title{font-size:clamp(1.6rem,2.5vw,2rem)}
-.skills-grid{grid-template-columns:repeat(2,1fr);gap:14px}
-.doc-previews,.rfti-grid{grid-template-columns:1fr 1fr}
-.hero-stats{flex-direction:column;align-items:center;gap:1.5rem;border-top:none;padding-top:2rem}
-.stat{border-right:none;border-bottom:none;padding:0}
-.project-card{margin-bottom:1.5rem}
-.project-body{padding:1.8rem}
-.project-header{padding:1.8rem}
-.credential-list li{padding:12px 0;gap:12px}
-.contact-grid{gap:2rem}
-}
-
-@media(max-width:600px){
-section{padding:2.8rem 1rem}
-.container{padding:0 1rem}
-.hero-cta{flex-direction:column;align-items:stretch}
-.btn-primary,.btn-secondary{width:100%;text-align:center;padding:14px 32px}
-.hero-tags{gap:6px}
-.hero-tag{font-size:0.7rem;padding:5px 12px}
-.doc-previews,.rfti-grid{grid-template-columns:1fr}
-.project-card{margin-bottom:1rem}
-.project-body{padding:1.4rem}
-.project-header{padding:1.4rem}
-.project-name{font-size:1.1rem}
-.skills-grid{grid-template-columns:1fr;gap:12px}
-.section-title{margin-bottom:0.6rem}
-.section-subtitle{margin-bottom:2rem}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
 }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav>
-  <div class="nav-logo">J<span>.</span>Resurreccion</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#photos">Site Work</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">CAAP Project</a></li>
-    <li><a href="#converge-project">Converge</a></li>
-    <li><a href="#ai-automation-project">AI Automation</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</nav>
-
-<div class="mobile-nav" id="mobileNav">
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">J.J. Resurreccion</a>
+    <nav class="links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-end">
+      <a class="btn btn-line nav-cv" href="Jonathan_Jed_Resurreccion_CV.pdf" download>Download CV
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M10 3v10M5.5 8.5 10 13l4.5-4.5M4 17h12"/></svg>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<div class="menu" id="menu">
   <a href="#about">About</a>
-  <a href="#photos">Site Work</a>
+  <a href="#experience">Experience</a>
   <a href="#skills">Skills</a>
-  <a href="#projects">CAAP Project</a>
-  <a href="#converge-project">Converge</a>
-  <a href="#ai-automation-project">AI Automation</a>
+  <a href="#credentials">Credentials</a>
   <a href="#contact">Contact</a>
+  <a class="btn btn-solid" href="Jonathan_Jed_Resurreccion_CV.pdf" download>Download CV</a>
 </div>
 
-<section class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Available for Remote &amp; Freelance Work</div>
-    <h1 class="hero-name">Jonathan Jed<br><span>Resurreccion</span></h1>
-    <p class="hero-title">Construction Estimator &nbsp;&middot;&nbsp; Construction Virtual Assistant &nbsp;&middot;&nbsp; Civil Engineer</p>
-    <div class="hero-tags">
-      <span class="hero-tag">Quantity Take-offs</span>
-      <span class="hero-tag">Cost Estimation</span>
-      <span class="hero-tag">QA/QC Documentation</span>
-      <span class="hero-tag">Outside Plant Design</span>
-      <span class="hero-tag">Planswift</span>
-      <span class="hero-tag">AutoCAD / Revit</span>
-      <span class="hero-tag">Make (Automation)</span>
-      <span class="hero-tag">AI-Assisted Workflow</span>
-    </div>
-    <div class="hero-cta">
-      <a href="#contact" class="btn-primary">Hire Me</a>
-      <a href="#projects" class="btn-secondary">View Projects</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat"><span class="stat-num">EA</span><span class="stat-label">Skills Assessed 2024</span></div>
-      <div class="stat"><span class="stat-num">PRC</span><span class="stat-label">Licensed Engineer</span></div>
-      <div class="stat"><span class="stat-num">RFTI</span><span class="stat-label">Certified Completions</span></div>
-    </div>
-  </div>
-</section>
+<main id="main">
 
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <p class="section-label">About Me</p>
-        <h3 class="section-title">Civil Engineer | Construction Specialist | AI Automation Solutions</h3>
-        <br>
-        <p>I'm a licensed Civil Engineer with years of hands-on experience managing complex infrastructure and building construction projects — from airport terminal rehabilitation under the Civil Aviation Authority of the Philippines (CAAP) to national telecommunications infrastructure rollout for Converge ICT Solutions via Metroworks ICT Construction Inc.</p>
-        <p>I deliver accurate quantity take-offs, cost estimates, QA/QC documentation, and project coordination support to construction firms and builders.</p>
-        <p>Alongside my engineering work, I am continuously expanding into AI automation—building practical solutions using tools like ChatGPT, Claude, and Make (Integromat) to streamline processes and improve efficiency. I am open to opportunities in this space and keen to contribute to projects that leverage both engineering expertise and AI-driven innovation.</p>
-      </div>
+<!-- ======================= COVER ======================= -->
+<section class="cover" id="top">
+  <div class="wrap">
+    <div class="cover-grid">
       <div>
-        <ul class="credential-list">
-          <li>
-            <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M12 2L3 7l9 5 9-5-9-5zM3 17l9 5 9-5M3 12l9 5 9-5"/></svg></div>
-            <div class="cred-text"><strong>Engineers Australia &mdash; Skills Assessment</strong><span>Civil Engineer Occupation &middot; Assessed 2024</span></div>
-          </li>
-          <li>
-            <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
-            <div class="cred-text"><strong>Licensed Civil Engineer &mdash; PRC Philippines</strong><span>Professional Regulation Commission &middot; 2023</span></div>
-          </li>
-          <li>
-            <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8L14 2z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
-            <div class="cred-text"><strong>Planswift Quantity Surveyor Course</strong><span>NobleQs &middot; Online &middot; 2025</span></div>
-          </li>
-          <li>
-            <div class="cred-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-            <div class="cred-text"><strong>Revit Structure</strong><span>XStructures &middot; Online &middot; 2026</span></div>
-          </li>
-          <li>
-            <div class="cred-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-            <div class="cred-text"><strong>Graduate Diploma in Strategic Leadership</strong><span>Hospitality Training Academy, Gold Coast &middot; 2025</span></div>
-          </li>
-        </ul>
+        <h1 class="h1">Jonathan Jed Resurreccion</h1>
+        <p class="roles"><span>Civil Engineer</span> <b>/</b> <span>Construction Estimator</span> <b>/</b> <span>Project Engineer</span></p>
+        <p class="lead">Licensed civil engineer delivering aviation and telecommunications infrastructure. I prepare <strong>quantity take-offs, BOQs, cost estimates and QA/QC documentation</strong> that keep projects compliant, on budget and on schedule.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="mailto:rjonathanjed@gmail.com">Email me
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5"/></svg>
+          </a>
+          <a class="btn btn-line" href="Jonathan_Jed_Resurreccion_CV.pdf" download>Download CV
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M10 3v10M5.5 8.5 10 13l4.5-4.5M4 17h12"/></svg>
+          </a>
+        </div>
+      </div>
+      <figure class="tip">
+        <img src="imgs/caap/caap_2.jpg" alt="Jonathan in a hard hat on site, in front of reinforced concrete columns and scaffolding at Davao International Airport" width="3024" height="4032" fetchpriority="high">
+        <figcaption>On site, Davao International Airport terminal rehabilitation</figcaption>
+      </figure>
+    </div>
+
+    <dl class="label" aria-label="Key facts">
+      <div><dt class="field">Largest project</dt><dd><strong>PHP 1B+</strong> International Cable Landing Station, as Project-in-Charge</dd></div>
+      <div><dt class="field">Completions</dt><dd><strong>RFTI certified</strong> on both Central Office sites, GSS001 and GSS003</dd></div>
+      <div><dt class="field">Current site</dt><dd><strong>Davao International Airport</strong> passenger terminal rehabilitation, since Nov 2025</dd></div>
+      <div><dt class="field">Licence</dt><dd><strong>PRC Licensed Civil Engineer</strong>, Philippines, 2023</dd></div>
+      <div><dt class="field">Assessment</dt><dd><strong>Engineers Australia</strong> skills assessment, Civil Engineer, 2024</dd></div>
+      <div><dt class="field">Based</dt><dd><strong>United Kingdom</strong>, available for immediate start</dd></div>
+    </dl>
+  </div>
+</section>
+
+<div class="pages" id="pages">
+
+<!-- ======================= ABOUT ======================= -->
+<section class="page" id="about">
+  <div class="wrap">
+    <div class="line head">
+      <div class="m"></div>
+      <div class="b"><h2 class="h2">Engineer on site, estimator at the desk.</h2></div>
+    </div>
+    <div class="line">
+      <div class="m"></div>
+      <div class="b">
+        <div class="copy">
+          <p class="lead">I&rsquo;m a licensed Civil Engineer with years of hands-on experience managing complex infrastructure and building construction projects, from <strong>airport terminal rehabilitation</strong> under the Civil Aviation Authority of the Philippines (CAAP) to <strong>national telecommunications infrastructure rollout</strong> for Converge ICT Solutions via Metroworks ICT Construction Inc.</p>
+          <p class="body">I deliver accurate quantity take-offs, cost estimates, QA/QC documentation and project coordination support to construction firms and builders.</p>
+        </div>
+        <dl class="facts">
+          <div><dt class="field">Sectors</dt><dd>Aviation, telecommunications, building construction</dd></div>
+          <div><dt class="field">Education</dt><dd>BS Civil Engineering, University of the Immaculate Conception, Davao City</dd></div>
+          <div><dt class="field">Based</dt><dd>United Kingdom. Available for full-time or part-time roles.</dd></div>
+        </dl>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CAAP -->
-<section id="photos">
-  <div class="container">
-    <p class="section-label">On-Site Evidence</p>
-    <h2 class="section-title" style="color:white">Real Site. Real Work.</h2>
-    <p class="section-subtitle">Active construction supervision at Davao International Airport &mdash; Passenger Terminal Building Rehabilitation.</p>
-    <div class="parallax-carousel-wrapper">
-      <div class="carousel-container">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide active" data-tag="Site Inspection" data-description="On-site drawing review and structural inspection — Davao International Airport PTB Rehabilitation">
-            <img src="imgs/caap/caap_1.jpg" alt="Engineer site inspection" loading="lazy">
-            <div class="slide-overlay"></div>
-          </div>
-          <div class="carousel-slide" data-tag="Site Supervision" data-description="Structural column & scaffolding works inspection and coordination — Davao International Airport PTB">
-            <img src="imgs/caap/caap_2.jpg" alt="Site supervision" loading="lazy">
-            <div class="slide-overlay"></div>
-          </div>
-          <div class="carousel-slide" data-tag="Site Supervision" data-description="Structural column & scaffolding works progress monitoring — Davao International Airport PTB">
-            <img src="imgs/caap/caap_3.jpg" alt="Structural works" loading="lazy">
-            <div class="slide-overlay"></div>
-          </div>
-          <div class="carousel-slide" data-tag="Civil & Structural Works" data-description="Mobile crane operations and reinforced concrete column works — PTB Rehabilitation Project">
-            <img src="imgs/caap/caap_4.jpg" alt="Crane operations" loading="lazy">
-            <div class="slide-overlay"></div>
-          </div>
-        </div>
-        <div class="carousel-controls">
-          <button class="carousel-btn prev" id="prevBtn" aria-label="Previous slide">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button class="carousel-btn next" id="nextBtn" aria-label="Next slide">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        </div>
-        <div class="carousel-indicators" id="carouselIndicators">
-          <button class="indicator active" data-index="0" aria-label="Slide 1"></button>
-          <button class="indicator" data-index="1" aria-label="Slide 2"></button>
-          <button class="indicator" data-index="2" aria-label="Slide 3"></button>
-          <button class="indicator" data-index="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-caption" id="carouselCaption">
-          <span class="carousel-caption-tag" id="captionTag">Site Inspection</span>
-          <p class="carousel-caption-text" id="captionText">On-site drawing review and structural inspection — Davao International Airport PTB Rehabilitation</p>
-        </div>
+<!-- ======================= EXPERIENCE ======================= -->
+<section class="page" id="experience">
+  <div class="wrap">
+    <div class="line head">
+      <div class="m"></div>
+      <div class="b">
+        <h2 class="h2">Experience</h2>
+        <p class="lead">Aviation and telecommunications infrastructure, from site supervision and contractor management to estimates and QA/QC records. Each claim links to the document behind it.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<section id="skills">
-  <div class="container">
-    <p class="section-label">What I Do</p>
-    <h2 class="section-title">Core Competencies</h2>
-    <p class="section-subtitle">Technical skills built from real project experience &mdash; not just training courses.</p>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M9 7H6a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-3M13 3h8v8M21 3L9 15"/></svg></div>
-        <div class="skill-name">Quantity Take-offs</div>
-        <div class="skill-desc">Accurate material &amp; labour quantities using Planswift &amp; AutoCAD</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></div>
-        <div class="skill-name">Cost Estimation</div>
-        <div class="skill-desc">Detailed BOQs, unit costing, and bid preparation for civil &amp; building works</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8L14 2zM9 13l2 2 4-4"/></svg></div>
-        <div class="skill-name">QA/QC Documentation</div>
-        <div class="skill-desc">ITRs, ITPs, transmittals, inspection reports &amp; compliance records</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <div class="skill-name">Technical Drawing Review</div>
-        <div class="skill-desc">Reading &amp; interpreting civil, architectural and structural drawings</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-        <div class="skill-name">Outside Plant Design</div>
-        <div class="skill-desc">Central office facility design, CEF routing, electrical &amp; mechanical layout</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <div class="skill-name">AI &amp; Automation</div>
-        <div class="skill-desc">Make, ChatGPT &amp; Claude for faster, error-free construction workflows</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECT 1: CAAP -->
-<section id="projects">
-  <div class="container">
-    <p class="section-label">Featured Project 1</p>
-    <h2 class="section-title">CAAP Davao Airport — PTB Rehabilitation</h2>
-    <p class="section-subtitle">Active aviation infrastructure project where I lead QA/QC documentation, cost estimation, and site supervision.</p>
-    <div class="project-card">
-      <div class="project-header">
-        <div class="project-type">Aviation Infrastructure &middot; Active Project</div>
-        <div class="project-name">Repair, Rehabilitation &amp; Improvement of the Passenger Terminal Building</div>
-        <div class="project-org">Civil Aviation Authority of the Philippines (CAAP) &middot; Davao International Airport</div>
-      </div>
-      <div class="project-body">
-        <div class="project-meta">
-          <div class="meta-item"><div class="meta-label">Role</div><div class="meta-value">Project Civil Engineer</div></div>
-          <div class="meta-item"><div class="meta-label">Status</div><div class="meta-value">Active &mdash; Nov 2025 to Present</div></div>
-          <div class="meta-item"><div class="meta-label">Scope</div><div class="meta-value">Rehabilitation &middot; QA/QC &middot; Cost Estimation &middot; Site Supervision</div></div>
-        </div>
-        <ul class="deliverable-list">
-          <li>Managed all QA/QC documentation including ITRs, material submittals, transmittals, and compliance records across multiple concurrent scopes</li>
-          <li>Conducted quantity take-offs and cost estimation using Planswift estimating software for additional scope works across active construction phases</li>
-          <li>Supervised day-to-day construction ensuring compliance with approved drawings, specifications, and project schedules</li>
-          <li>Reviewed and approved material submittals</li>
-          <li>Monitored material usage, verified quantities, and controlled wastage throughout all active construction phases</li>
-        </ul>
-        <p style="font-size:0.78rem;font-weight:600;color:var(--gray-light);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem">SAMPLE WORKS</p>
-        <div class="doc-previews">
-          <div class="gallery-item-wrapper">
-            <div class="gallery-thumb" id="caap-pow" data-project="pow">
-              <img src="imgs/caap/pow/POW 1.png" alt="Proof of Work Sample">
-              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
-            </div>
-            <div class="gallery-caption">SAMPLE POW PTB</div>
-          </div>
-          <div class="gallery-item-wrapper">
-            <div class="gallery-thumb" id="caap-boq" data-project="boq">
-              <img src="imgs/caap/boq/BOQ 1.png" alt="Bill of Quantities Sample">
-              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
-            </div>
-            <div class="gallery-caption">SAMPLE BOQ's</div>
-          </div>
-          <div class="gallery-item-wrapper">
-            <div class="gallery-thumb" id="caap-planswift" data-project="planswift">
-              <img src="imgs/caap/planswift/PLANSWIFT 1.png" alt="Planswift Sample">
-              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
-            </div>
-            <div class="gallery-caption">SAMPLE PLANSWIFT WORKS</div>
-          </div>
-          <div class="gallery-item-wrapper">
-            <div class="gallery-thumb" id="caap-transmittals" data-project="transmittal">
-              <img src="imgs/caap/transmittal/SAMPLE TRANSMITTALS 1.png" alt="transmittal samples">
-              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
-            </div>
-            <div class="gallery-caption">SAMPLE TRANSMITTALS</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECT 2: CONVERGE / METROWORKS -->
-<section id="converge-project">
-  <div class="container">
-    <p class="section-label">Featured Project 2</p>
-    <h2 class="section-title">Converge ICT / Metroworks &mdash; Outside Plant Design</h2>
-    <p class="section-subtitle">National telecommunications infrastructure rollout — Central Office Facility construction and RFTI-certified completions in General Santos City, South Cotabato.</p>
-
-    <div class="project-card">
-      <div class="project-header converge-header">
-        <div class="project-type">Telecommunications Infrastructure &middot; Completed</div>
-        <div class="project-name">Central Office Facility &mdash; Outside Plant Design (GSS001 &amp; GSS003)</div>
-        <div class="project-org">Converge ICT Solutions Inc. &middot; Metroworks ICT Construction Inc. &middot; General Santos City, South Cotabato</div>
-      </div>
-      <div class="project-body">
-        <div class="project-meta">
-          <div class="meta-item"><div class="meta-label">Role</div><div class="meta-value">Sr. Facilities Engineer / Civil Engineer</div></div>
-          <div class="meta-item"><div class="meta-label">Duration</div><div class="meta-value">Apr 2021 &mdash; Jan 2023</div></div>
-          <div class="meta-item"><div class="meta-label">Completion Status</div><div class="meta-value">RFTI Certified &mdash; Both Sites</div></div>
-        </div>
-        <div class="rfti-badge">RFTI Certified &mdash; Ready for Telecom Installation</div>
-        <ul class="deliverable-list">
-          <li>Led civil works as Project-in-Charge for Central Office Facility sites from detailed engineering design through to RFTI certification</li>
-          <li>Served as Project-in-Charge for the construction and implementation of the ICLS (International Cable Landing Station) Facility Project valued at over PHP 1 Billion, overseeing civil, structural, and site development works from planning phase through project execution and completion</li>
-          <li>Managed project estimates, budgeting, quantity take-offs, and cost evaluation to support project feasibility and implementation requirements</li>
-          <li>Led contractor sourcing, pre-qualification audits, and bidding process management — evaluating technical capability, manpower resources, financial capacity, safety compliance, and project experience of participating contractors</li>
-          <li>Supervised overall construction activities including reinforced concrete slab works, structural rebar inspections, formworks, concrete pouring operations, elevation checking, and quality assurance inspections on-site</li>
-          <li>Coordinated daily construction operations with contractors, consultants, and project stakeholders to ensure compliance with approved plans, specifications, project schedules, and safety standards</li>
-          <li>Ensured compliance with engineering standards, QA/QC procedures, occupational safety requirements, and construction best practices throughout all project phases</li>
+    <article class="line entry now" id="caap">
+      <div class="m"><p class="date">Nov 2025 <small>to present</small></p></div>
+      <div class="b">
+        <h3 class="h3">Passenger Terminal Building, repair, rehabilitation and improvement</h3>
+        <p class="small">Civil Aviation Authority of the Philippines (CAAP), Davao International Airport, Davao City</p>
+        <dl class="specs">
+          <div><dt class="field">Role</dt><dd>Project Civil Engineer</dd></div>
+          <div><dt class="field">Status</dt><dd>Active project</dd></div>
+          <div><dt class="field">Sector</dt><dd>Aviation infrastructure</dd></div>
+          <div><dt class="field">Scope</dt><dd>Rehabilitation, QA/QC, cost estimation, site supervision</dd></div>
+        </dl>
+        <ul class="bul">
+          <li>Manage <strong>all QA/QC documentation</strong>, including ITRs, material submittals, transmittals and compliance records, across multiple concurrent scopes of work. <button class="pen proof" data-gallery="transmittal"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 1.75h5.5L12.5 5v9.25H4z"/><path d="M9.5 1.75V5h3"/></svg>Transmittals</button></li>
+          <li>Prepare <strong>quantity take-offs and cost estimates in Planswift</strong> for additional scope works across active construction phases. <button class="pen proof" data-gallery="planswift"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 1.75h5.5L12.5 5v9.25H4z"/><path d="M9.5 1.75V5h3"/></svg>Take-offs</button> <button class="pen proof" data-gallery="boq"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 1.75h5.5L12.5 5v9.25H4z"/><path d="M9.5 1.75V5h3"/></svg>BOQs</button> <button class="pen proof" data-gallery="pow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 1.75h5.5L12.5 5v9.25H4z"/><path d="M9.5 1.75V5h3"/></svg>Program of Work</button></li>
+          <li>Supervise day-to-day construction to ensure compliance with approved drawings, specifications and the project programme. <button class="pen proof" data-gallery="site"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.75" y="3.25" width="12.5" height="9.5"/><path d="m1.75 11 3.5-3.5 3 3 2-2 4 3.5"/></svg>Site photos</button></li>
+          <li>Review and approve material submittals prior to procurement and installation.</li>
+          <li>Monitor material usage, verify quantities and control wastage throughout all construction phases.</li>
         </ul>
 
-        <p style="font-size:0.78rem;font-weight:600;color:var(--gray-light);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;margin-top:1.5rem">SAMPLE WORKS</p>
-        <div class="doc-previews">
-          <div class="gallery-item-wrapper">
-            <div class="gallery-thumb" id="converge-project-plans" data-project="converge-plans">
-              <img src="imgs/converge/project-plans/PLAN 1.png" alt="Project Plans Sample">
-              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
-            </div>
-            <div class="gallery-caption">PROJECT PLANS</div>
-          </div>
-          <div class="gallery-item-wrapper">
-            <div class="gallery-thumb" id="converge-cable-landing-station" data-project="converge-cables">
-              <img src="imgs/converge/cable-landing-station/PHOTO 1.jfif" alt="Cable Landing Station Sample">
-              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
-            </div>
-            <div class="gallery-caption">DAVAO INTERNATIONAL CABLE LANDING STATION</div>
+        <div class="block">
+          <p class="bh">On site <span>4 photos</span></p>
+          <div class="photos">
+            <button class="photo" style="--r:1.3333" data-gallery="site" data-index="0" aria-label="Open site photo: crane operations and column works"><img src="imgs/caap/caap_1.jpg" alt="" loading="lazy" width="4032" height="3024"></button>
+            <button class="photo" style="--r:.75" data-gallery="site" data-index="1" aria-label="Open site photo: drawing review and structural inspection"><img src="imgs/caap/caap_3.jpg" alt="" loading="lazy" width="3024" height="4032"></button>
+            <button class="photo" style="--r:.75" data-gallery="site" data-index="2" aria-label="Open site photo: scaffolding works progress monitoring"><img src="imgs/caap/caap_4.jpg" alt="" loading="lazy" width="3024" height="4032"></button>
+            <button class="photo" style="--r:.75" data-gallery="site" data-index="3" aria-label="Open site photo: column and scaffolding inspection"><img src="imgs/caap/caap_2.jpg" alt="" loading="lazy" width="3024" height="4032" style="object-position:30% 70%"></button>
           </div>
         </div>
 
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECT 3: AI AUTOMATION -->
- <section id="ai-automation-project">
-  <div class="container">
-    <p class="section-label">Featured Project 3</p>
-    <h2 class="section-title">AI AUTOMATION PRACTICE PROJECT</h2>
-    <p class="section-subtitle">LunaVista Restaurant Reservation Automation — This is a sample AI Automation workflow project created for portfolio practice using Make.com, Google Forms, Google Sheets, and Gmail Automation. The goal of the project is to automate the restaurant reservation process from customer booking up to reservation confirmation and staff notification.</p>
-
-    <div class="project-card">
-      <div class="project-header converge-header">
-        <!-- <div class="project-type">Telecommunications Infrastructure &middot; Completed</div> -->
-        <div class="project-name">LunaVista Restaurant Reservation Automation</div>
-        <!-- <div class="project-org">Converge ICT Solutions Inc. &middot; Metroworks ICT Construction Inc. &middot; General Santos City, South Cotabato</div> -->
-      </div>
-      <div class="project-body">
-        <div class="project-meta">
-          <div class="meta-item"><div class="meta-label">Role</div><div class="meta-value">AI Automation Developer</div></div>
-          <!-- <div class="meta-item"><div class="meta-label">Duration</div><div class="meta-value">[DATE]</div></div>
-          <div class="meta-item"><div class="meta-label">Status</div><div class="meta-value">COMPLETED</div></div> -->
+        <div class="block">
+          <p class="bh">Sample documents <span>11 pages</span></p>
+          <div class="docs">
+            <button class="doc" data-gallery="pow"><span class="doc-img"><img src="imgs/caap/pow/POW 1.png" alt="" loading="lazy"></span><span class="doc-cap"><span>Program of Work</span><span>2 pp</span></span></button>
+            <button class="doc" data-gallery="boq"><span class="doc-img"><img src="imgs/caap/boq/BOQ 1.png" alt="" loading="lazy"></span><span class="doc-cap"><span>Bills of Quantities</span><span>3 pp</span></span></button>
+            <button class="doc" data-gallery="planswift"><span class="doc-img"><img src="imgs/caap/planswift/PLANSWIFT 1.png" alt="" loading="lazy"></span><span class="doc-cap"><span>Planswift take-offs</span><span>3 pp</span></span></button>
+            <button class="doc" data-gallery="transmittal"><span class="doc-img"><img src="imgs/caap/transmittal/SAMPLE TRANSMITTALS 1.png" alt="" loading="lazy"></span><span class="doc-cap"><span>Transmittals</span><span>3 pp</span></span></button>
+          </div>
         </div>
-        <!-- <div class="rfti-badge">RFTI Certified &mdash; Ready for Telecom Installation</div> -->
+      </div>
+    </article>
 
-        <ul class="deliverable-list">
-          <li>Designed the automation workflow</li>
-          <li>Connected Google services using Make.com</li>
-          <li>Built automated reservation routing</li>
-          <li>Configured automatic email notifications</li>
-          <li>Optimized reservation scheduling system</li>
+    <article class="line entry">
+      <div class="m"><p class="date">2023 <small>to Aug 2025</small></p></div>
+      <div class="b">
+        <h3 class="h3">Full-time postgraduate study</h3>
+        <p class="small">Hospitality Training Academy, Gold Coast QLD, Australia</p>
+        <p class="body" style="margin-top:1rem">Completed the <strong>Graduate Diploma of Strategic Leadership</strong> while living and studying in Australia.</p>
+      </div>
+    </article>
+
+    <article class="line entry" id="converge">
+      <div class="m"><p class="date">Apr 2021 <small>to Jan 2023</small></p></div>
+      <div class="b">
+        <h3 class="h3">Central Office Facilities and the Davao International Cable Landing Station</h3>
+        <p class="small">Metroworks ICT Construction Inc. for Converge ICT Solutions Inc., General Santos City and Davao, Mindanao</p>
+        <p class="stamps"><span class="stamp">Project-in-Charge</span> <span class="stamp">RFTI certified</span></p>
+        <dl class="specs">
+          <div><dt class="field">Role</dt><dd>Senior Facilities Engineer / Civil Engineer</dd></div>
+          <div><dt class="field">Value</dt><dd>PHP 1B+ (ICLS facility)</dd></div>
+          <div><dt class="field">Sites</dt><dd>GSS001 and GSS003, General Santos City; Davao ICLS</dd></div>
+          <div><dt class="field">Completion</dt><dd>RFTI certified, both Central Office sites</dd></div>
+        </dl>
+        <ul class="bul">
+          <li>Served as <strong>Project-in-Charge for the International Cable Landing Station (ICLS)</strong>, valued at over PHP 1 billion, overseeing civil, structural and site development works from planning through execution and completion. <button class="pen proof" data-gallery="icls"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.75" y="3.25" width="12.5" height="9.5"/><path d="m1.75 11 3.5-3.5 3 3 2-2 4 3.5"/></svg>ICLS photos</button></li>
+          <li>Led civil works for Central Office Facility sites from detailed engineering design through to <strong>RFTI (Ready for Telecom Installation) certification</strong>. <button class="pen proof" data-gallery="plans"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 1.75h5.5L12.5 5v9.25H4z"/><path d="M9.5 1.75V5h3"/></svg>Project plans</button></li>
+          <li>Managed project estimates, budgeting, quantity take-offs and cost evaluation to support project feasibility and implementation.</li>
+          <li>Led contractor sourcing, pre-qualification audits and bidding, evaluating technical capability, manpower, financial capacity, safety compliance and track record.</li>
+          <li>Supervised reinforced concrete slab works, rebar inspections, formworks, concrete pours, elevation checks and on-site quality inspections.</li>
+          <li>Coordinated daily operations with contractors, consultants and stakeholders to meet approved plans, specifications, schedules and safety standards.</li>
+          <li>Ensured compliance with engineering standards, QA/QC procedures, occupational safety requirements and construction best practice across all phases.</li>
         </ul>
-
-        <div>
-          <h5>
-            This automation workflow demonstrates how AI automation can simplify restaurant reservation management by:
-          </h5><br>
-          <ul class="deliverable-list">
-            <li>Reducing manual work</li>
-            <li>Improving response time</li>
-            <li>Organizing reservations automatically</li>
-            <li>Enhancing customer communication</li>
-          </ul>
-        </div>
-
-        <p style="font-size:0.78rem;font-weight:600;color:var(--gray-light);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;margin-top:1.5rem">SAMPLE WORKFLOW</p>
-        <div class="doc-previews">
-          <div class="gallery-item-wrapper">
-            <div class="gallery-thumb" id="lunavista-workflow" data-project="lunavista">
-              <img src="imgs/ai/STEP 1.png" alt="LunaVista workflow sample">
-              <div class="magnifier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></div>
-            </div>
-            <div class="gallery-caption">LunaVista Restaurant Reservation Workflow</div>
+        <div class="block">
+          <p class="bh">Sample documents and photos <span>17 files</span></p>
+          <div class="docs two">
+            <button class="doc" data-gallery="plans"><span class="doc-img"><img src="imgs/converge/project-plans/PLAN 1.png" alt="" loading="lazy"></span><span class="doc-cap"><span>Outside plant design, project plans</span><span>14 sheets</span></span></button>
+            <button class="doc" data-gallery="icls"><span class="doc-img"><img src="imgs/converge/cable-landing-station/PHOTO 1.jfif" alt="" loading="lazy" style="object-position:center"></span><span class="doc-cap"><span>Davao International Cable Landing Station</span><span>3 photos</span></span></button>
           </div>
         </div>
+      </div>
+    </article>
+  </div>
+</section>
 
+<!-- ======================= SKILLS ======================= -->
+<section class="page" id="skills">
+  <div class="wrap">
+    <div class="line head">
+      <div class="m"></div>
+      <div class="b">
+        <h2 class="h2">What I do</h2>
+        <p class="lead">Technical skills built from real project experience, not just training courses.</p>
+      </div>
+    </div>
+    <div class="line">
+      <div class="m"></div>
+      <div class="b">
+        <div class="skills">
+          <div class="skill"><h3 class="h4">Quantity take-offs</h3><p class="small">Accurate material and labour quantities using Planswift and AutoCAD.</p></div>
+          <div class="skill"><h3 class="h4">Cost estimation</h3><p class="small">Detailed BOQs, unit rate build-ups, budgeting and tender or bid preparation for civil and building works.</p></div>
+          <div class="skill"><h3 class="h4">QA/QC documentation</h3><p class="small">ITPs, ITRs, transmittals, material submittals, inspection reports and compliance records.</p></div>
+          <div class="skill"><h3 class="h4">Site and delivery</h3><p class="small">Construction supervision, reinforced concrete works, contractor pre-qualification, stakeholder coordination and progress reporting.</p></div>
+          <div class="skill"><h3 class="h4">Technical drawing review</h3><p class="small">Reading and interpreting civil, architectural and structural drawings.</p></div>
+          <div class="skill"><h3 class="h4">Outside plant design</h3><p class="small">Central office facility design, CEF routing, electrical and mechanical layout.</p></div>
+        </div>
+        <dl class="tools">
+          <dt class="field">Software</dt>
+          <dd>Planswift, AutoCAD, Revit Structure, Microsoft Office</dd>
+        </dl>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div>
-        <p class="section-label">Get In Touch</p>
-        <h2 class="section-title">Let&rsquo;s Work Together</h2>
-        <p class="section-subtitle">Available for remote estimating contracts, VA roles, and project documentation support worldwide.</p>
-        <div class="contact-item">
-          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
-          <div class="contact-item-text"><strong>Email</strong><a href="mailto:rjonathanjed@gmail.com">rjonathanjed@gmail.com</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.18 6.18l1.27-.84a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-          <div class="contact-item-text"><strong>Phone / WhatsApp</strong><span>+63 907 356 2645 &middot; WhatsApp: +61 431 097 512</span></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
-          <div class="contact-item-text"><strong>Location / Availability</strong><span>Philippines &middot; Open to remote work worldwide</span></div>
-        </div>
-      </div>
-      <div>
-        <div class="availability-card">
-          <div class="avail-badge">Available Now</div>
-          <h3>Immediate Start</h3>
-          <p>Available for remote estimating contracts, part-time and full-time VA roles, and project documentation support. Responsive via email and WhatsApp across time zones.</p>
-          <p>Engineers Australia Skills Assessment (2024) and PRC licence available upon request.</p>
-          <p style="color:rgba(255,255,255,0.85);font-weight:500;margin-bottom:6px">Services offered:</p>
-          <p>Quantity take-offs &middot; BOQ preparation &middot; Cost estimation &middot; QA/QC documentation &middot; Outside plant design review &middot; Technical drawing review &middot; Material submittals &middot; Progress reporting &middot; General construction VA support</p>
-          <p style="color:rgba(255,255,255,0.85);font-weight:500;margin-bottom:6px">AI & Automation Services:</p>
-          <p>Basic workflow automation, task streamlining, and documentation support using ChatGPT, Claude, and Make (Integromat)</p>
-        </div>
-      </div>
+<!-- ======================= CREDENTIALS ======================= -->
+<section class="page" id="credentials">
+  <div class="wrap">
+    <div class="line head">
+      <div class="m"></div>
+      <div class="b"><h2 class="h2">Licences and qualifications</h2></div>
     </div>
+
+    <div class="line cred"><div class="m"><p class="date">2025</p></div><div class="b"><div><p class="cred-name">Graduate Diploma of Strategic Leadership</p><p class="small">Hospitality Training Academy, Gold Coast QLD</p></div></div></div>
+    <div class="line cred"><div class="m"><p class="date">2024</p></div><div class="b"><div><p class="cred-name">Skills Assessment, Civil Engineer</p><p class="small">Engineers Australia</p></div><span class="stamp">Assessed</span></div></div>
+    <div class="line cred"><div class="m"><p class="date">2023</p></div><div class="b"><div><p class="cred-name">Licensed Civil Engineer</p><p class="small">Professional Regulation Commission (PRC), Philippines</p></div><span class="stamp">Licensed</span></div></div>
+    <div class="line cred last"><div class="m"><p class="date">Degree</p></div><div class="b"><div><p class="cred-name">Bachelor of Science in Civil Engineering</p><p class="small">University of the Immaculate Conception, Davao City</p></div></div></div>
+
+    <div class="line sub"><div class="m"></div><div class="b"><h3 class="h4">Professional development</h3></div></div>
+    <div class="line cred"><div class="m"><p class="date">2026</p></div><div class="b"><div><p class="cred-name">Revit Structure</p><p class="small">XStructures, online</p></div></div></div>
+    <div class="line cred last"><div class="m"><p class="date">2025</p></div><div class="b"><div><p class="cred-name">Planswift Quantity Surveyor Course</p><p class="small">NobleQs, online</p></div></div></div>
+
+    <div class="line note"><div class="m"></div><div class="b"><p class="small">Engineers Australia skills assessment and PRC licence available upon request. Referees available upon request.</p></div></div>
   </div>
 </section>
 
-<footer>&copy; 2026 Jonathan Jed Resurreccion &middot; Construction Estimator &amp; Virtual Assistant &middot; All rights reserved</footer>
-
-<!-- Image Gallery Modal -->
-<div class="gallery-modal" id="galleryModal">
-  <div class="modal-content">
-    <div class="modal-header-bar">
-      <div class="modal-project-name" id="modalProjectName">Gallery</div>
-      <button class="modal-close" id="modalClose" aria-label="Close gallery">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <div class="modal-track-wrapper">
-      <div class="modal-track" id="modalTrack"></div>
-      <div class="modal-overlay"></div>
-      <div class="modal-controls">
-        <button class="modal-btn prev" id="modalPrev" aria-label="Previous image">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        </button>
-        <button class="modal-btn next" id="modalNext" aria-label="Next image">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </button>
-      </div>
-      <div class="modal-indicators" id="modalIndicators"></div>
-    </div>
-    <div class="modal-info">
-      <div class="modal-counter"><span class="modal-slide-count"><span id="currentSlide">1</span> / <span id="totalSlides">1</span></span></div>
-      <div class="modal-title" id="modalTitle">Image Gallery</div>
-    </div>
-  </div>
 </div>
+
+<!-- ======================= BACK COVER: CONTACT ======================= -->
+<section class="back" id="contact">
+  <div class="wrap">
+    <div class="back-grid">
+      <div>
+        <h2 class="h2">Let&rsquo;s work together.</h2>
+        <p class="lead">Available for Civil Engineer, Construction Estimator and Project Engineer roles.</p>
+        <ul class="ways">
+          <li><a class="way" href="mailto:rjonathanjed@gmail.com"><span class="field">Email</span><span class="way-v">rjonathanjed@gmail.com</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M6 14 14 6M7 6h7v7"/></svg></a></li>
+          <li><a class="way" href="https://wa.me/447833879284" target="_blank" rel="noopener"><span class="field">Mobile &amp; WhatsApp, UK</span><span class="way-v">+44 7833 879284</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M6 14 14 6M7 6h7v7"/></svg></a></li>
+          <li><a class="way" href="tel:+639073562645"><span class="field">Mobile, Philippines</span><span class="way-v">+63 907 356 2645</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M6 14 14 6M7 6h7v7"/></svg></a></li>
+          <li><div class="way"><span class="field">Based</span><span class="way-v">United Kingdom</span></div></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-solid" href="mailto:rjonathanjed@gmail.com">Email me
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5"/></svg>
+          </a>
+          <a class="btn btn-line" href="Jonathan_Jed_Resurreccion_CV.pdf" download>Download CV
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M10 3v10M5.5 8.5 10 13l4.5-4.5M4 17h12"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="avail">
+        <div class="avail-top"><h3 class="h3">Immediate start</h3><span class="stamp">Available now</span></div>
+        <p class="body">Available for full-time and part-time roles in civil engineering, estimating and project delivery. Responsive by email and WhatsApp.</p>
+        <div class="avail-part">
+          <p class="bh">What I can take on</p>
+          <p class="small">Quantity take-offs, BOQ preparation, cost estimation, QA/QC documentation, outside plant design review, technical drawing review, material submittals, progress reporting.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <p>&copy; <span id="year">2026</span> Jonathan Jed Resurreccion</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= LIGHTBOX ======================= -->
+<dialog class="lb" id="lb" aria-labelledby="lbTitle">
+  <div class="lb-bar">
+    <div><p class="lb-count" id="lbCount">1 / 1</p><p class="lb-title" id="lbTitle">Gallery</p></div>
+    <button class="lb-btn" id="lbClose" aria-label="Close"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15"/></svg></button>
+  </div>
+  <div class="lb-stage" id="lbStage">
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="m12 4-6 6 6 6"/></svg></button>
+    <button class="lb-btn lb-next" id="lbNext" aria-label="Next"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="m8 4 6 6-6 6"/></svg></button>
+  </div>
+  <p class="lb-cap" id="lbCap"></p>
+  <div class="lb-thumbs" id="lbThumbs"></div>
+</dialog>
 
 <script>
-(function() {
-  let currentIndex = 0;
-  const track = document.getElementById('carouselTrack');
-  const slides = document.querySelectorAll('.carousel-slide');
-  const indicators = document.querySelectorAll('.indicator');
-  const captionTag = document.getElementById('captionTag');
-  const captionText = document.getElementById('captionText');
-  const totalSlides = slides.length;
-  let autoplayTimer = null;
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  function updateCaption() {
-    const currentSlide = slides[currentIndex];
-    const tag = currentSlide.dataset.tag;
-    const description = currentSlide.dataset.description;
-    captionTag.textContent = tag;
-    captionText.textContent = description;
-  }
+(() => {
+  const nav = document.getElementById('nav');
+  const cover = document.getElementById('top');
+  const back = document.getElementById('contact');
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('menu');
 
-  function updateCarousel() {
-    const offset = -currentIndex * 100;
-    track.style.transform = `translateX(${offset}%)`;
-    
-    slides.forEach((slide, index) => {
-      slide.classList.toggle('active', index === currentIndex);
-    });
-    
-    indicators.forEach((indicator, index) => {
-      indicator.classList.toggle('active', index === currentIndex);
-    });
-    
-    updateCaption();
-  }
+  const onScroll = () => {
+    const y = window.scrollY + 64;
+    const onCover = y < cover.offsetHeight || y >= back.offsetTop;
+    nav.classList.toggle('on-paper', !onCover || menu.classList.contains('is-open'));
+  };
+  const setMenu = open => {
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menu.classList.toggle('is-open', open);
+    onScroll();
+  };
+  btn.addEventListener('click', () => setMenu(btn.getAttribute('aria-expanded') !== 'true'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  matchMedia('(min-width: 981px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateCarousel();
-    resetAutoplay();
-  }
+  const links = [...document.querySelectorAll('.links a')];
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (!en.isIntersecting) return;
+    links.forEach(l => l.classList.toggle('is-active', l.hash === '#' + en.target.id));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  links.forEach(l => { const s = document.querySelector(l.hash); if (s) io.observe(s); });
 
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-    resetAutoplay();
-  }
-
-  function goToSlide(index) {
-    currentIndex = index;
-    updateCarousel();
-    resetAutoplay();
-  }
-
-  function startAutoplay() {
-    autoplayTimer = setInterval(nextSlide, 5000);
-  }
-
-  function resetAutoplay() {
-    clearInterval(autoplayTimer);
-    startAutoplay();
-  }
-
-  // Event listeners
-  document.getElementById('nextBtn')?.addEventListener('click', nextSlide);
-  document.getElementById('prevBtn')?.addEventListener('click', prevSlide);
-  
-  indicators.forEach(indicator => {
-    indicator.addEventListener('click', () => {
-      goToSlide(parseInt(indicator.dataset.index));
-    });
-  });
-
-  // Keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    if (document.getElementById('carouselTrack')) {
-      if (e.key === 'ArrowRight') nextSlide();
-      if (e.key === 'ArrowLeft') prevSlide();
-    }
-  });
-
-  // Pause autoplay on hover
-  const carousel = document.querySelector('.carousel-container');
-  carousel?.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
-  carousel?.addEventListener('mouseleave', startAutoplay);
-
-  // Initialize
-  updateCaption();
-  startAutoplay();
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll);
+  onScroll();
 })();
 
-// Hamburger Menu
-(function() {
-  const hamburger = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobileNav');
-  
-  hamburger?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    hamburger.classList.toggle('active');
-    mobileNav.classList.toggle('active');
-  });
-
-  // Close menu when link is clicked
-  const navLinks = mobileNav?.querySelectorAll('a');
-  navLinks?.forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      mobileNav.classList.remove('active');
-    });
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (hamburger && mobileNav && hamburger.classList.contains('active')) {
-      if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
-        hamburger.classList.remove('active');
-        mobileNav.classList.remove('active');
-      }
-    }
-  });
-})();
-
-// Gallery Modal Carousel
-(function() {
-  const galleryModal = document.getElementById('galleryModal');
-  const modalTrack = document.getElementById('modalTrack');
-  const modalPrev = document.getElementById('modalPrev');
-  const modalNext = document.getElementById('modalNext');
-  const modalClose = document.getElementById('modalClose');
-  const modalIndicators = document.getElementById('modalIndicators');
-  const modalProjectName = document.getElementById('modalProjectName');
-  const currentSlideSpan = document.getElementById('currentSlide');
-  const totalSlidesSpan = document.getElementById('totalSlides');
-
-  const projectImages = {
-    pow: ['POW 1.png', 'POW 2.png'],
-    boq: ['BOQ 1.png', 'BOQ 2.png', 'BOQ 3.png'],
-    planswift: ['PLANSWIFT 1.png', 'PLANSWIFT 2.png', 'PLANSWIFT 3.png'],
-    transmittal: ['SAMPLE TRANSMITTALS 1.png', 'SAMPLE TRANSMITTALS 2.png', 'SAMPLE TRANSMITTALS 3.png'],
-    'converge-plans': ['PLAN 1.png', 'PLAN 2.png', 'PLAN 3.png', 'PLAN 4.png', 'PLAN 5.png', 'PLAN 6.png', 'PLAN 7.png', 'PLAN 8.png', 'PLAN 9.png', 'PLAN 10.png', 'PLAN 11.png', 'PLAN 12.png', 'PLAN 13.png', 'PLAN 14.png'],
-    'converge-cables': ['PHOTO 1.jfif', 'PHOTO 2.jfif', 'PHOTO 3.jfif'],
-    lunavista: ['STEP 1.png', 'STEP 2.png', 'STEP 2.1.png', 'STEP 3.png', 'STEP 4.png', 'STEP 5.png', 'STEP 5.1.png', 'STEP 6.png', 'STEP 7.png', 'STEP 8.png', 'STEP 9.jpg']
+(() => {
+  const seq = (path, names, cap) => names.map((n, i) => ({ src: path + n, caption: cap ? cap(n, i) : '' }));
+  const G = {
+    site: { title: 'On site, Davao International Airport PTB rehabilitation', items: [
+      { src: 'imgs/caap/caap_1.jpg', caption: 'Civil and structural works: mobile crane operations and reinforced concrete column works' },
+      { src: 'imgs/caap/caap_3.jpg', caption: 'Site inspection: on-site drawing review and structural inspection' },
+      { src: 'imgs/caap/caap_4.jpg', caption: 'Site supervision: structural column and scaffolding works progress monitoring' },
+      { src: 'imgs/caap/caap_2.jpg', caption: 'Site supervision: structural column and scaffolding works inspection and coordination' }
+    ]},
+    pow: { title: 'Program of Work, Passenger Terminal Building', items: seq('imgs/caap/pow/', ['POW 1.png', 'POW 2.png']) },
+    boq: { title: 'Bills of Quantities', items: seq('imgs/caap/boq/', ['BOQ 1.png', 'BOQ 2.png', 'BOQ 3.png']) },
+    planswift: { title: 'Planswift quantity take-offs', items: seq('imgs/caap/planswift/', ['PLANSWIFT 1.png', 'PLANSWIFT 2.png', 'PLANSWIFT 3.png']) },
+    transmittal: { title: 'Sample transmittals', items: seq('imgs/caap/transmittal/', ['SAMPLE TRANSMITTALS 1.png', 'SAMPLE TRANSMITTALS 2.png', 'SAMPLE TRANSMITTALS 3.png']) },
+    plans: { title: 'Outside plant design, Central Office Facility plans', items: seq('imgs/converge/project-plans/', Array.from({ length: 14 }, (_, i) => `PLAN ${i + 1}.png`), (n, i) => `Sheet ${i + 1} of 14`) },
+    icls: { title: 'Davao International Cable Landing Station', items: seq('imgs/converge/cable-landing-station/', ['PHOTO 1.jfif', 'PHOTO 2.jfif', 'PHOTO 3.jfif']) }
   };
+  const $ = id => document.getElementById(id);
+  const img = Object.assign(document.createElement('img'), { id: 'lbImg', alt: '' });
+  $('lbStage').prepend(img);
+  const dlg = $('lb'), title = $('lbTitle'), count = $('lbCount'), cap = $('lbCap'), thumbs = $('lbThumbs'), prev = $('lbPrev'), next = $('lbNext');
+  let g = null, i = 0, opener = null;
+  img.addEventListener('load', () => img.classList.add('is-loaded'));
 
-  const projectTitles = {
-    pow: 'Proof of Work Documentation',
-    boq: 'Bill of Quantities Analysis',
-    planswift: 'Planswift Quantity Takeoffs',
-    transmittal: 'Sample Transmittals',
-    'converge-plans': 'Project Engineering Plans',
-    'converge-cables': 'Davao International Cable Landing Station',
-    lunavista: 'LunaVista Restaurant Reservation Workflow'
-  };
-
-  const projectPaths = {
-    pow: 'imgs/caap/pow/',
-    boq: 'imgs/caap/boq/',
-    planswift: 'imgs/caap/planswift/',
-    transmittal: 'imgs/caap/transmittal/',
-    'converge-plans': 'imgs/converge/project-plans/',
-    'converge-cables': 'imgs/converge/cable-landing-station/',
-    lunavista: 'imgs/ai/'
-  };
-
-  let currentProject = null;
-  let currentIndex = 0;
-  let totalSlides = 0;
-
-  function initializeGallery(project) {
-    currentProject = project;
-    currentIndex = 0;
-    totalSlides = projectImages[project].length;
-
-    // Clear previous slides
-    modalTrack.innerHTML = '';
-    modalIndicators.innerHTML = '';
-
-    // Create slides
-    projectImages[project].forEach((imageName, index) => {
-      const slide = document.createElement('div');
-      slide.className = 'modal-slide' + (index === 0 ? ' active' : '');
-      slide.innerHTML = `<img src="${projectPaths[project]}${imageName}" alt="Image ${index + 1}" loading="lazy">`;
-      modalTrack.appendChild(slide);
-
-      // Create indicator
-      const indicator = document.createElement('button');
-      indicator.className = 'modal-indicator' + (index === 0 ? ' active' : '');
-      indicator.dataset.index = index;
-      indicator.addEventListener('click', () => goToSlide(index));
-      modalIndicators.appendChild(indicator);
+  function show(n) {
+    i = (n + g.items.length) % g.items.length;
+    const it = g.items[i];
+    img.classList.remove('is-loaded');
+    img.src = it.src;
+    img.alt = it.caption || `${g.title}, page ${i + 1}`;
+    if (img.complete && img.naturalWidth) img.classList.add('is-loaded');
+    count.textContent = `${i + 1} / ${g.items.length}`;
+    cap.textContent = it.caption;
+    [...thumbs.children].forEach((t, k) => t.setAttribute('aria-current', k === i));
+    thumbs.children[i]?.scrollIntoView({ block: 'nearest', inline: 'center' });
+    const pre = g.items[(i + 1) % g.items.length]; if (pre) new Image().src = pre.src;
+  }
+  function open(key, start, from) {
+    g = G[key]; if (!g) return;
+    opener = from;
+    title.textContent = g.title;
+    const multi = g.items.length > 1;
+    prev.hidden = next.hidden = thumbs.hidden = !multi;
+    thumbs.innerHTML = '';
+    g.items.forEach((it, k) => {
+      const b = document.createElement('button');
+      b.setAttribute('aria-label', `Show page ${k + 1}`);
+      b.innerHTML = `<img src="${it.src}" alt="" loading="lazy">`;
+      b.addEventListener('click', () => show(k));
+      thumbs.appendChild(b);
     });
-
-    // Update info
-    modalProjectName.textContent = projectTitles[project];
-    totalSlidesSpan.textContent = totalSlides;
-    updateSlideCounter();
+    dlg.showModal();
+    document.body.classList.add('lb-open');
+    show(start || 0);
   }
-
-  function updateCarousel() {
-    const offset = -currentIndex * 100;
-    modalTrack.style.transform = `translateX(${offset}%)`;
-
-    const slides = modalTrack.querySelectorAll('.modal-slide');
-    slides.forEach((slide, index) => {
-      slide.classList.toggle('active', index === currentIndex);
-    });
-
-    const indicators = modalIndicators.querySelectorAll('.modal-indicator');
-    indicators.forEach((indicator, index) => {
-      indicator.classList.toggle('active', index === currentIndex);
-    });
-
-    updateSlideCounter();
-  }
-
-  function updateSlideCounter() {
-    currentSlideSpan.textContent = currentIndex + 1;
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateCarousel();
-  }
-
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-  }
-
-  function goToSlide(index) {
-    currentIndex = index;
-    updateCarousel();
-  }
-
-  function openGallery(project) {
-    initializeGallery(project);
-    galleryModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeGallery() {
-    galleryModal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  // Event listeners
-  modalPrev.addEventListener('click', prevSlide);
-  modalNext.addEventListener('click', nextSlide);
-  modalClose.addEventListener('click', closeGallery);
-
-  // Close modal when clicking outside
-  galleryModal.addEventListener('click', (e) => {
-    if (e.target === galleryModal) {
-      closeGallery();
-    }
+  dlg.addEventListener('close', () => { document.body.classList.remove('lb-open'); img.removeAttribute('src'); opener?.focus(); });
+  $('lbClose').addEventListener('click', () => dlg.close());
+  prev.addEventListener('click', () => show(i - 1));
+  next.addEventListener('click', () => show(i + 1));
+  $('lbStage').addEventListener('click', e => { if (e.target.id === 'lbStage') dlg.close(); });
+  dlg.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); show(i + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); show(i - 1); }
   });
-
-  // Keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    if (galleryModal.classList.contains('active')) {
-      if (e.key === 'ArrowRight') nextSlide();
-      if (e.key === 'ArrowLeft') prevSlide();
-      if (e.key === 'Escape') closeGallery();
-    }
+  let x0 = null;
+  dlg.addEventListener('touchstart', e => { x0 = e.changedTouches[0].clientX; }, { passive: true });
+  dlg.addEventListener('touchend', e => {
+    if (x0 === null || g.items.length < 2) return;
+    const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1));
   });
-
-  // Gallery thumbnails click handlers
-  document.getElementById('caap-pow')?.addEventListener('click', () => openGallery('pow'));
-  document.getElementById('caap-boq')?.addEventListener('click', () => openGallery('boq'));
-  document.getElementById('caap-planswift')?.addEventListener('click', () => openGallery('planswift'));
-  document.getElementById('caap-transmittals')?.addEventListener('click', () => openGallery('transmittal'));
-  document.getElementById('converge-project-plans')?.addEventListener('click', () => openGallery('converge-plans'));
-  document.getElementById('converge-cable-landing-station')?.addEventListener('click', () => openGallery('converge-cables'));
-  document.getElementById('lunavista-workflow')?.addEventListener('click', () => openGallery('lunavista'));
-
-  // Make wrapper divs clickable too
-  document.querySelectorAll('.gallery-item-wrapper').forEach(wrapper => {
-    wrapper.style.cursor = 'pointer';
-    const project = wrapper.querySelector('.gallery-thumb')?.dataset.project;
-    if (project) {
-      wrapper.addEventListener('click', () => openGallery(project));
-    }
-  });
-
-  // Touch/swipe support
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  galleryModal.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, false);
-
-  galleryModal.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  }, false);
-
-  function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > swipeThreshold) {
-      if (diff > 0) nextSlide();
-      else prevSlide();
-    }
-  }
+  document.querySelectorAll('[data-gallery]').forEach(el =>
+    el.addEventListener('click', () => open(el.dataset.gallery, +(el.dataset.index || 0), el)));
 })();
 </script>
 </body>
