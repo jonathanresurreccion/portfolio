@@ -107,7 +107,7 @@ strong{font-weight:600;color:var(--ink)}
 .links a.is-active{border-bottom-color:var(--margin)}
 .nav-end{display:flex;gap:.75rem;align-items:center}
 .nav-cv{min-height:40px;padding:0 1rem}
-.menu-btn{display:none;width:44px;height:44px;border:2px solid var(--ink);place-items:center}
+.menu-btn{display:none;width:44px;height:44px;border:2px solid var(--ink);place-items:center;place-content:center}
 .menu-btn i{display:block;width:18px;height:2px;background:var(--ink);transition:transform .25s var(--ease),opacity .2s}
 .menu-btn i+i{margin-top:4px}
 .menu-btn[aria-expanded="true"] i:nth-child(1){transform:translateY(6px) rotate(45deg)}
@@ -115,8 +115,8 @@ strong{font-weight:600;color:var(--ink)}
 .menu-btn[aria-expanded="true"] i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 .menu{position:fixed;inset:var(--nav) 0 auto;z-index:99;background:var(--paper);box-shadow:0 1px 0 var(--rule-strong);padding:.25rem var(--gutter) 1.5rem;display:none}
 .menu.is-open{display:block}
-.menu a:not(.btn){display:block;padding:1rem 0;border-bottom:1px solid var(--rule);font-size:var(--t-lead);font-weight:600;text-decoration:none}
-.menu .btn{margin-top:1.25rem;width:100%;justify-content:center}
+.menu a:not(.btn){display:block;padding:.875rem 0;border-bottom:1px solid var(--rule);font-size:var(--t-body);font-weight:600;line-height:1.4;text-decoration:none}
+.menu .btn{margin-top:1.25rem;width:100%;justify-content:center;font-size:var(--t-body)}
 
 /* ==========================================================
    Cover (yellow)
@@ -297,7 +297,17 @@ body.lb-open{overflow:hidden}
   .back-grid{grid-template-columns:1fr}
 }
 @media (max-width:760px){
-  :root{--m:0px;--gap:1.25rem}
+  :root{
+    --m:0px;--gap:1.25rem;
+    --t-label:.6875rem;
+    --t-sm:.8125rem;
+    --t-body:.9375rem;
+    --t-lead:1rem;
+    --t-h4:.9375rem;
+    --t-h3:1.25rem;
+    --t-h2:2rem;
+    --t-h1:clamp(2.5rem,1.6rem + 4.5vw,3rem);
+  }
   .pages::before{left:calc(var(--gutter) - 2px)}
   .line{grid-template-columns:minmax(0,1fr);padding-left:var(--gap)}
   .line>.m{text-align:left;padding:0 0 .625rem}
